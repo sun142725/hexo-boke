@@ -1,6 +1,6 @@
 ---
 title: React
-tag: 框架
+tag: React
 author: 孙继红
 ---
 搭建React自动化开发环境
