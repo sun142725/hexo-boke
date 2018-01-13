@@ -39,18 +39,22 @@ author: 孙继红
 
   HBuilder创建的应用默认不使用沉浸式状态栏样式，需要进行如下配置开启：
   打开应用的manifest.json文件，切换到代码视图，在plus -> statusbar 下添加immersed节点并设置值为true。
-
-  "plus": {
+```bash
+"plus": {
       "statusbar": {
           "immersed": true
       }
   }
+```
   保存后提交App云端打包
 
   如果不生效，在distribute节点下的apple和goole两个节点下添加：
 
+```bash
   "UIReserveStatusbarOffset": true,（apple节点下添加）
   "ImmersedStatusbar": true,/*设置为沉浸栏模式*/（goole节点下添加）
+```
+
 
 
   终端支持：
@@ -58,7 +62,7 @@ author: 孙继红
   - iOS7.0及以上系统支持。
   前景色处理：
   与背景色调整相同，如果背景图颜色不当，会造成前景的信号栏文字颜色与背景太相近，看不清前景，此时需要调整前景色。
-  前景色的使用限制更多些，只能设置黑或白，通过plus.navigator.setStatusBarStyle('dark');设前景为黑色，'dark'换成light则前景色变为白色。
+  前景色的使用限制更多些，只能设置黑或白，通过`plus.navigator.setStatusBarStyle('dark')`;设前景为黑色，'dark'换成light则前景色变为白色。
   同时前景色处理在终端支持方面：
   - Android5只有小米和魅族支持，Android6及以上所有安卓支持；
   - iOS7及以上支持
@@ -72,7 +76,7 @@ author: 孙继红
   其他注意：
   沉浸式状态栏不支持动态调整，属于应用级，真机运行不生效，需要提交到云端打包后有效。
   一个app设置了沉浸式，就意味着里面的每个webview都变成沉浸式。
-  这可能会造成很多页面都需要调整高度，此时有一种方案，就是在webview创建时，允许通过一个参数设置把这个webview的状态条再模拟显示出来，plus.webview.create('http://m.weibo.cn/u/3196963860', 'test', {statusbar:{background:"#D4D4D4"}})。这样设置后，webview的高度重新回到状态栏下方，不再顶到屏幕顶部。
+  这可能会造成很多页面都需要调整高度，此时有一种方案，就是在webview创建时，允许通过一个参数设置把这个webview的状态条再模拟显示出来，`plus.webview.create('http://m.weibo.cn/u/3196963860', 'test', {statusbar:{background:"#D4D4D4"}})`。这样设置后，webview的高度重新回到状态栏下方，不再顶到屏幕顶部。
   此api从HBuilder8.1 alpha版起生效。
 
 
