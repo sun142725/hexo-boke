@@ -10,12 +10,18 @@ author: 孙继红
  ### 1、正常
  ### 2、变色
  写法：
- 使用5+API [plus.navigator.setStatusBarBackground）](https://hexo.io/docs/server.html)。
+ 使用5+API [plus.navigator.setStatusBarBackground）](http://www.html5plus.org/doc/zh_cn/navigator.html#plus.navigator.setStatusBarBackground)。
 
  首页配置
  首页需要在manifest.json文件中，plus->launchwebview下添加statusbar节点，并配置background的值（格式为#RRGGBB）。
 
-
+```bash
+"launchwebview": {
+			"status":{
+				"background": "#f65a41"
+			}
+		}
+```
  若首页为secondwebview，则调整launchwebview为secondwebview即可。
 
  终端支持：
