@@ -25,8 +25,49 @@ es6: `var` `function` `let` `const` `import` `class`
 * let实际是新增块及作用域
 ### set/map
 
+### 函数的Rest参数和扩展
+```bash
+ function sum(...m){
+ let total = 0;
+ for(var i of m){
+ total += i;
+ }
+ }
+ sum(1,3,5,7)
+ let arr1 = [1,2,3]
+ let arr2 = [4,5,6]
+ arr1.contact(arr2)
+ 
+ let [a, b, c] = '123'
+ let arr = [a,b,c]
+ console.log(arr)
+ ["1", "2", "3"]
+ 
+```
 ### Promise
-
+```bash
+let checks = function(){
+return new Promise(function(resolve,reject){
+if(flag){
+resolve({status:0,result:true})
+}else{
+reject('error')
+}
+})
+}
+checks().then(res=>console.log(res))
+{status: 0, result: true}
+```
 ### 箭头函数
-
+* 当返回值有且只有一个时不用写return
+`console.log((a)=>console.log(a))`
+* 有多步时需要加{}
+`console.log((a)=>{console.log(a)})`
 ### 模板字符串
+
+```bash
+let a = '红红'
+console.log(`${a}最帅`)
+
+* '红红最帅'
+```
