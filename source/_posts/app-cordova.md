@@ -1,7 +1,7 @@
 ---
 title: app-cordova
 date: 2018-01-12
-tags: cordova
+tags: [ios, android]
 author: 孙继红
 ---
 使用cordova打包app环境配置
