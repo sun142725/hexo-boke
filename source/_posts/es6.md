@@ -48,15 +48,16 @@ es6: `var` `function` `let` `const` `import` `class`
 ```bash
 let checks = function(){
 return new Promise(function(resolve,reject){
-if(flag){
-resolve({status:0,result:true})
+var a = Math.floor(Math.random()*2)
+if(a){
+resolve('success')
 }else{
 reject('error')
 }
 })
 }
 checks().then(res=>console.log(res))
-{status: 0, result: true}
+.catch(err=>console.log(err))
 ```
 ### 箭头函数
 * 当返回值有且只有一个时不用写return
