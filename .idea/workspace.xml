@@ -66,8 +66,8 @@
           <file leaf-file-name="socket.md" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/source/_posts/socket.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+                <state relative-caret-position="327">
+                  <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -196,7 +196,7 @@
     <handled-path value="$PROJECT_DIR$/themes/landscape/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="101" />
     <option name="y" value="21" />
     <option name="width" value="1702" />
@@ -377,15 +377,15 @@
       <workItem from="1517190487091" duration="3400000" />
       <workItem from="1517971986294" duration="4297000" />
       <workItem from="1518077736924" duration="3538000" />
-      <workItem from="1520561287551" duration="8520000" />
+      <workItem from="1520561287551" duration="8575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76331000" />
+    <option name="totallyTimeSpent" value="76386000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="21" width="1702" height="999" extended-state="1" />
+    <frame x="101" y="21" width="1702" height="999" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1670673" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -662,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/socket.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="327">
+          <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
           <folding />
         </state>
       </provider>

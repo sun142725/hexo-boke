@@ -28,5 +28,9 @@ server.listen(18080, function(){
 ```
 ### client
 ```bash
-
+const socket = io.connect('http://192.168.1.177:18080')
+socket.on('news', function (data) {
+            console.log(data)
+        })
+        socket.emit('content', {content: value})
 ```
