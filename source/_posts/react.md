@@ -4,6 +4,8 @@ date: 2018-01-12 16:56:37
 tags: react
 author: 孙继红
 ---
+[react官网](https://reactjs.org/docs/hello-world.html)
+[react-router-dom](http://reacttraining.cn/web/example/auth-workflow)
 ### 组件的声明方式
 * 函数式定义 `无状态组件`
 * es5原生方式  `React.createClass`
@@ -39,5 +41,5 @@ $ 无状态组件只能访问输入的props，同样的props会得到同样的�
 * React.createClass的mixins不够自然、直观；React.Component形式非常适合高阶组件（Higher Order Components--HOC）,它以更直观的形式展示了比mixins更强大的功能，并且HOC是纯净的JavaScript，不用担心他们会被废弃。HOC可以参考无状态组件(Stateless Component) 与高阶组件。
 
 #### React.Component
-函数需手动绑定
+函数需手动绑定(箭头函数不需要)
 

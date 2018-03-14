@@ -1,10 +1,11 @@
 ---
 title: audio,video
 date: 2018-01-12 16:56:37
-tags: html5
+tags: video
 author: 孙继红
 ---
 
+## audio\video基础知识
 ###  属性
 * audio.volume
 
