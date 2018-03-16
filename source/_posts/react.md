@@ -6,6 +6,8 @@ author: 孙继红
 ---
 [react官网](https://reactjs.org/docs/hello-world.html)
 [react-router-dom](http://reacttraining.cn/web/example/auth-workflow)
+[redux](https://redux.js.org/introduction/core-concepts)
+[阮一峰redux](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
 ### 组件的声明方式
 * 函数式定义 `无状态组件`
 * es5原生方式  `React.createClass`
