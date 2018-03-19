@@ -1,0 +1,94 @@
+---
+title: node
+tags: node
+author: 孙继红
+---
+## node
+// Node.js是基于ChromeV8引擎的javascript运行环境
+//node.js没有window对象
+```bash
+ const os = require('os'); //操作系统 opration system
+const fs = require('fs');
+const path = require('path'); //path 路径
+
+const base = path.join(os.homedir(),'Desktop');//os.homedir  根目录
+for(let i=0;i<5;i++){
+    fs.mkdirSync(path.join(base,String(Math.random())))
+    // mkdirSync => make directory sync 已同步的方式制造目录
+}
+```
+* clone获取百度图片至本地
+```bash
+const request = require('request');
+const cheerio = require('cheerio');
+request.get('http://www.baidu.com',(err,response,body)=>{
+   var $ = cheerio.load(body.toString());
+   var imgUrl = 'https:'+$('#lg img').attr('src');
+   request.get(imgUrl).pipe(
+       fs.createWriteStream(
+           path.join(__dirname,'baidu-logo.png')
+   ))
+});
+```
+
+### buffer
+```bash
+console.log(__dirname,__filename);
+const fs = require('fs');
+// 克隆文件
+fs.readFile(__dirname+'/1.txt','utf8',(err,body)=>{
+    console.log(body)
+    fs.writeFile(__dirname+'/2.txt',body,(err)=>{
+        if(!err){
+            console.log('ok')
+        }
+    })
+});
+fs.readFile(__dirname+'/banner1.jpg',(err,body)=>{
+    console.log(body)
+    fs.writeFile(__dirname+'/b.jpg',body,(err)=>{
+        if(!err){
+            console.log('ok')
+        }
+    })
+})
+```
+
+### path/fs
+```bash
+const fs = require('fs');
+const path = require('path');
+
+function isFile(path){
+    return fs.lstatSync(path).isFile()·
+}
+function isDirectory(path){
+   return fs.lstatSync(path).isDirectory()
+}
+function walk(dir,callback){
+    var files = fs.readdirSync(dir);
+    files.forEach(v=>{
+        if(!v.startsWith('.')){
+            let tmp = path.join(dir,v);
+            if(isFile(tmp)){
+            // 如果是文件调用回调函数
+               callback(tmp)
+            }else if(isDirectory(tmp)){
+            // 如果是文件夹，再次循环
+                walk(tmp,callback)
+            }
+        }
+    })
+}
+//  克隆文件夹内所有图片至桌面
+walk('E:/桌面/node',(file)=>{
+    let ext = path.extname(file);
+    let ispic = /.jpg|.png|.gif|.jpeg/i;
+    if(ispic.test(ext)){
+        let ws = fs.createWriteStream(path.join('E:/桌面/img',Math.random()+ext));
+        fs.createReadStream(file).pipe(ws)
+    }
+});
+```
+
+//
