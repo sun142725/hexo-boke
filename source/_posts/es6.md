@@ -64,6 +64,14 @@ checks().then(res=>console.log(res))
 `console.log((a)=>console.log(a))`
 * 有多步时需要加{}
 `console.log((a)=>{console.log(a)})`
+* this的绑定
+```bash
+箭头函数中，this指向的固定化，并不是因为箭头函数内部有绑定this的
+
+机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外
+
+层代码块的this。正是因为它没有this，所以也就不能用作构造函数。
+```
 ### 模板字符串
 
 ```bash
