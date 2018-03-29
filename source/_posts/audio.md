@@ -4,7 +4,7 @@ date: 2018-01-12 16:56:37
 tags: video
 author: 孙继红
 ---
-
+[低性能安卓机解决video全屏方案](http://www.jb51.net/html5/539458.html)
 ## audio\video基础知识
 ###  属性
 * audio.volume
