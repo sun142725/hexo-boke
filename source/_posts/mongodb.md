@@ -6,6 +6,7 @@ author: 孙继红
 [windows 安装mongodb](http://www.runoob.com/mongodb/mongodb-window-install.html)
 
 [mongoose 文档](http://www.nodeclass.com/api/mongoose.html)
+[mongodb中文社区](http://www.mongoing.com/)
 ## 基础知识
 ### 常用的数据类型
 * String 字符串
