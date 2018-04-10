@@ -25,6 +25,10 @@ author: 孙继红
 * Code 代码类型。用于在文档中存储javascript代码
 * Regular expression 用于存储正则
 ## 开始使用
+```bash
+mongod --logpath=/data/db/log/mongod.log --logappend --fork   //在服务器后台进程中打开
+mongo  // 进入MongoDB后台管理
+```
 ### 链接数据库
 ```bash
 var mongoose = require('mongoose');
