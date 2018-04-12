@@ -26,6 +26,8 @@ commit
 `git commit -m ""`
 * push
 push前看好所在分支
+第一次推送前注意
+`git push -u origin master`
 `git push`
 
 ### 在服务器搭建git环境
