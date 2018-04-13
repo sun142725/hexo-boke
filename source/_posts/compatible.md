@@ -4,10 +4,11 @@ date: 2017-12-22
 tags: [兼容]
 author: 孙继红
 ---
-
+### babel转换后
+[Babel下的ES6兼容性与规范](https://www.tuicool.com/articles/nEJRri)
 ###  使用强制
 * 如果ie浏览器中，会让ie浏览器启用最高内核解析html代码
-> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />（目前百度采用这种写法）
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />（目前百度采用这种写法）
 ```bash
 <meta http-equiv="X-UA-Compatible" content="edge" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
