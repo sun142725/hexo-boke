@@ -1,7 +1,7 @@
 ---
 title: css Hack
 date: 2018-01-12 16:56:37
-tags: css
+tags: [css, 兼容]
 author: 孙继红
 ---
 [常见的web浏览器兼容解决](https://blog.csdn.net/xustart7720/article/details/73604651)
