@@ -4,6 +4,7 @@ date: 2018-01-12 16:56:37
 tags: css
 author: 孙继红
 ---
+[常见的web浏览器兼容解决](https://blog.csdn.net/xustart7720/article/details/73604651)
 [解决ie7,ie8](https://zhidao.baidu.com/question/583799354335504245.html)
 [有关css和js针对不同浏览器兼容的问题](https://blog.csdn.net/yinkaihui/article/details/51142494)
 [CSDN freshlover的博客专栏](http://blog.csdn.net/freshlover/article/details/12132801)
