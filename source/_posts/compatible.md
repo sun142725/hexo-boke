@@ -1,4 +1,10 @@
-[解决ie7,ie8](https://zhidao.baidu.com/question/583799354335504245.html)
+---
+title: ie兼容
+date: 2017-12-22
+tags: [兼容]
+author: 孙继红
+---
+
 ###  使用强制
 * 如果ie浏览器中，会让ie浏览器启用最高内核解析html代码
 > <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />（目前百度采用这种写法）
