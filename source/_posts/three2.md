@@ -58,7 +58,96 @@ LineBasicMaterial( parameters )
         scene.add(line)
 ```
 ------------画-------线-------完-------成---------------------------------
+###  棋盘 源码见下
+```bash
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网格</title>
+    <script src="../three.js"></script>
+</head>
+<style>
+    #canvas{
+        width:100%;
+        height: 600px;
+        background-color: #333;
+    }
+</style>
+<body>
+<div id="canvas">
 
+</div>
+</body>
+</html>
+<script>
+    var width = document.getElementById('canvas').offsetWidth
+    var height = document.getElementById('canvas').offsetHeight
+    //  创建场景
+    var scene = new THREE.Scene()
+    //  创建相机
+    var camera
+    function initCamera() {
+        camera = new THREE.PerspectiveCamera(45, width/height,1 ,10000)
+        camera.position.x = 0;
+        camera.position.y = 1000;
+        camera.position.z = 0;
+        camera.up.x = 0;
+        camera.up.y = 0;
+        camera.up.z = 1;
+        camera.lookAt({
+            x: 0,
+            y: 0,
+            z: 0
+        })
+    }
+    //  设置光源
+    var light
+    function initLight() {
+        light = new THREE.DirectionalLight(0x0366d6, 1.0, 0)
+        light.position.set(100,100,200)
+        scene.add(light)
+    }
+    //  渲染器
+    var renderer
+    function initRenderer(){
+        renderer = new THREE.WebGLRenderer({
+            antialias: true
+        })
+        renderer.setSize(width,height)
+        document.getElementById('canvas').appendChild(renderer.domElement)
+        renderer.setClearColor(0xFFFFFF, 1.0)
+    }
+    //   划线
+    function initObject() {
+        var geometry = new THREE.Geometry()  //  创建几何体来存放点
+        geometry.vertices.push(new THREE.Vector3(-500,0,0))
+        geometry.vertices.push(new THREE.Vector3(500,0,0))
+        var material = new THREE.LineBasicMaterial({color: 0xf65a41}) // 画线
+        for(var i=0; i<=20; i++) {
+            var line = new THREE.Line(geometry, material)
+            line.position.z = i*50 - 500
+            scene.add(line)
+            var line = new THREE.Line(geometry, material)
+            line.position.x = i*50 - 500
+            line.rotation.y = Math.PI/180 * 90
+            scene.add(line)
+        }
+    }
+    function startThree() {
+        initCamera()
+        initLight()
+        initRenderer()
+        initObject()
+        renderer.clear()
+        renderer.render(scene, camera)
+    }
+    startThree()
+</script>
+```
 
 
 
