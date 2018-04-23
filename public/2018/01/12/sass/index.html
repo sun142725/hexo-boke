@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="孙继红">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>sass | 孙继红</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="孙继红" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="https://github.com/sun142725"><i class="fa fa-fw "></i>git</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/about"><i class="fa fa-fw "></i>mine</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="sass">
+            
+	            sass
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/css">
+               css
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/01/12</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="Sass简介"><a href="#Sass简介" class="headerlink" title="Sass简介"></a>Sass简介</h2><p>Sass 是一种css预处理器,CSS 预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为 CSS 增加了一些编程的特性，将 CSS 作为目标生成文件，然后开发者就只要使用这种语言进行编码工作。</p>
+<p>除了sass还有一些其他常见的预处理语言</p>
+<ul>
+<li>LESS</li>
+<li>Stylus<br>Sass 有时候也被称为 SCSS,两者之间不同之处有以下两点：</li>
+</ul>
+<p>文件扩展名不同，Sass 是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名<br>语法书写方式不同，Sass 是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS 的语法书写和我们的 CSS 语法书写方式非常类似。<br>来看一个示例：</p>
+<p>/<em> Sass 语法 </em>/<br>$font-stack: Helvetica, sans-serif<br>$primary-color: #333<br>body<br>  font: 100% $font-stack<br>  color: $primary-color<br>/<em> Scss 语法 </em>/<br>$font-stack: Helvetica, sans-serif;<br>$primary-color: #333;<br>body {<br>  font: 100% $font-stack;<br>  color: $primary-color;<br>}<br>编译出来的 CSS</p>
+<p>body {<br>  font: 100% Helvetica, sans-serif;<br>  color: #333;<br>}<br>scss文件中可以完全像写正常的css那样去写.</p>
+<ol>
+<li>sass安装<br>npm install -g node-sass<br>node-sass -w xxx.scss xxx.css –output-style expanded<br>node-sass 参数:</li>
+</ol>
+<p>-w, –watch                Watch a directory or file<br>-r, –recursive            Recursively watch directories or files<br>-o, –output               Output directory<br>-x, –omit-source-map-url  Omit source map URL comment from output<br>-i, –indented-syntax      Treat data from stdin as sass code (versus scss)<br>-q, –quiet                Suppress log output except on error<br>-v, –version              Prints version info<br>–output-style             CSS output style (nested | expanded | compact | compressed)<br>–indent-type              Indent type for output CSS (space | tab)<br>–indent-width             Indent width; number of spaces or tabs (maximum value: 10)<br>–linefeed                 Linefeed style (cr | crlf | lf | lfcr)<br>–source-comments          Include debug info in output<br>–source-map               Emit source map<br>–source-map-contents      Embed include contents in map<br>–source-map-embed         Embed sourceMappingUrl as data URI<br>–source-map-root          Base path, will be emitted in source-map as is<br>–include-path             Path to look for imported files<br>–follow                   Follow symlinked directories<br>–precision                The amount of precision allowed in decimal numbers<br>–importer                 Path to .js file containing custom importer<br>–functions                Path to .js file containing custom functions<br>–help                     Print usage info</p>
+<ol>
+<li>Sass的基本特性<br>变量<br>$brand-primary : darken(#428bca, 6.5%) !default;<br>$btn-primary-color : #fff !default;<br>$btn-primary-bg : $brand-primary !default;<br>$btn-primary-border : darken($btn-primary-bg, 5%) !default;<br>.btn-primary {<br>background-color: $btn-primary-bg;<br>color: $btn-primary-color;<br>border: 1px solid $btn-primary-border;<br>}<br>$baseLineHeight: 2;<br>$baseLineHeight: 1.5 !default;<br>body{<br> line-height: $baseLineHeight;<br>}<br>/<em> 局部变量 </em>/<br>$color: orange !default;<br>.block {<br>color: $color;<br>}<br>em {<br>$color: red;<br>a {<br> color: $color;<br>}<br>}<br>span {<br>color: $color;<br>}<br>嵌套<br>nav {<br>a {<br> color: red;<br> header &amp; {<br>   color:green;<br> }<br>}<br>}</li>
+</ol>
+<p>.box {<br>  border: {<br>   top: 1px solid red;<br>   bottom: 1px solid green;<br>  }<br>}</p>
+<p>.clearfix{<br>  &amp;:before,<br>  &amp;:after {<br>    content:””;<br>    display: table;<br>  }<br>  &amp;:after {<br>    clear:both;<br>    overflow: hidden;<br>  }<br>}<br>不要无节制嵌套,一切都根据实际情况判断</p>
+<p>混合宏</p>
+<p>@mixin border-radius{<br>  -webkit-border-radius: 5px;<br>  border-radius: 5px;<br>}<br>button{<br>  @include border-radius;<br>}<br>@mixin border-radius($radius:5px){<br>  -webkit-border-radius: $radius;<br>  border-radius: $radius;<br>}<br>.nav{<br>  @include border-radius;<br>}<br>.box{<br>  @include border-radius(3px);<br>}<br>@mixin center($width,$height){<br>  width: $width;<br>  height: $height;<br>  position: absolute;<br>  top: 50%;<br>  left: 50%;<br>  margin-top: -($height) / 2;<br>  margin-left: -($width) / 2;<br>}<br>.box-center {<br>  @include center(500px,300px);<br>}<br>@mixin box-shadow($shadows…){<br>  @if length($shadows) &gt;= 1 {<br>    -webkit-box-shadow: $shadows;<br>    box-shadow: $shadows;<br>  } @else {<br>    $shadows: 0 0 2px rgba(#000,.25);<br>    -webkit-box-shadow: $shadow;<br>    box-shadow: $shadow;<br>  }<br>}<br>.box {<br>  @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));<br>}<br>混合宏会生成冗余代码</p>
+<p>扩展/继承<br>.btn {<br>  border: 1px solid #ccc;<br>  padding: 6px 10px;<br>  font-size: 14px;<br>}</p>
+<p>.btn-primary {<br>  background-color: #f36;<br>  color: #fff;<br>  @extend .btn;<br>}</p>
+<p>.btn-second {<br>  background-color: orange;<br>  color: #fff;<br>  @extend .btn;<br>}<br>不会生成冗余代码</p>
+<p>占位符<br>%mt5 {<br>  margin-top: 5px;<br>}<br>%pt5{<br>  padding-top: 5px;<br>}<br>.btn {<br>  @extend %mt5;<br>  @extend %pt5;<br>}<br>mt5 和 pt5 并不会生成最终代码</p>
+<p>插值#{}<br>允许在#{}内部解析变量</p>
+<p>$properties: (margin, padding);<br>@mixin set-value($side, $value) {<br>  @each $prop in $properties {</p>
+<pre><code>#{$prop}-#{$side}: $value;
+</code></pre><p>  }<br>}<br>.login-box {<br>  @include set-value(top, 14px);<br>}<br>注释<br>类似 CSS 的注释方式，使用 ”/<em> ”开头，结属使用 ”</em>/ ”<br>类似 JavaScript 的注释方式，使用“//”<br>两者区别，前者会在编译出来的 CSS 显示，后者在编译出来的 CSS 中不会显示</p>
+<p>数据类型<br>Sass 和 JavaScript 语言类似，也具有自己的数据类型，在 Sass 中包含以下几种数据类型：</p>
+<p>数字: 如，1、 2、 13、 10px；<br>字符串：有引号字符串或无引号字符串，如，”foo” ‘bar’ baz；<br>颜色：如，blue, #04a3f9, rgba(255,0,0,0.5);<br>布尔型：如，true, false；<br>空值：如，null；<br>值列表：用空格或者逗号分开，如，1.5em 1em 0 2em , Helvetica, Arial, sans-serif<br>运算<br>.box {<br>  width: 20px + 8in;<br>}<br>$full-width: 960px;<br>$sidebar-width: 200px;<br>.content {<br>  width: $full-width -  $sidebar-width;<br>}<br>.box {<br>  width: 10px <em> 2;<br>}<br>.box {<br>  width: (100px / 2);<br>}<br>p {<br>  font: 10px/8px;             // 纯 CSS，不是除法运算<br>  $width: 1000px;<br>  width: $width/2;            // 使用了变量，是除法运算<br>  width: round(1.5)/2;        // 使用了函数，是除法运算<br>  height: (500px/2);          // 使用了圆括号，是除法运算<br>  margin-left: 5px + 8px/2px; // 使用了加（+）号，是除法运算<br>}<br>.box {<br>  width: ((220px + 720px) - 11 </em> 20 ) / 12 ;<br>}<br>p {<br>  color: #010203 + #040506;<br>  background-color: #010203 * 2;<br>}</p>
+<p>$content: “Hello” + “” + “Sass!”;<br>.box:before {<br>  content: “ #{$content} “;<br>}</p>
+<ol>
+<li>Sass高级特性<br>@if<br>@mixin blockOrHidden($boolean:true) {<br>@if $boolean {<br> display: block;<br>}<br>@else {<br> display: none;<br>}<br>}<br>.block {<br>@include blockOrHidden;<br>}<br>.hidden{<br>@include blockOrHidden(false);<br>}<br>@for<br>@for $i from <start> through <end><br>@for $i from <start> to <end><br>@for $i from 1 through 3 {<br>.item-#{$i} { width: 2em <em> $i; }<br>}<br>@for $i from 1 to 3 {<br>.item-#{$i} { width: 2em </em> $i; }<br>}<br>$grid-prefix: span !default;<br>$grid-width: 60px !default;<br>$grid-gutter: 20px !default;</end></start></end></start></li>
+</ol>
+<p>%grid {<br>  float: left;<br>  margin-left: $grid-gutter / 2;<br>  margin-right: $grid-gutter / 2;<br>}<br>@for $i from 1 through 12 {<br>  .#{$grid-prefix}#{$i}{<br>    width: $grid-width <em> $i + $grid-gutter </em> ($i - 1);<br>    @extend %grid;<br>  }<br>}<br>@each<br>$list: adam john wynn mason kuroir; //$list 就是一个列表<br>@mixin author-images {<br>    @each $author in $list {<br>        .photo-#{$author} {<br>            background: url(“/images/avatars/#{$author}.png”) no-repeat;<br>        }<br>    }<br>}<br>.author-bio {<br>    @include author-images;<br>}</p>
+<ol>
+<li>Sass中的函数<br>@function double($n) {<br>@return $n * 2;<br>}<br>#sidebar {<br>width: double(5px);<br>}<br>全部的内置函数</li>
+</ol>
+<p>字符串函数<br>unquote<br>quote<br>To-upper-case<br>To-lower-case<br>percentage<br>.footer{<br>  width : percentage(.2)<br>}<br>round<br>ceil<br>floor<br>abs<br>min<br>max<br>random<br>列表函数</p>
+<p>length 取列表数据的长度<br>nth (10px 20px 30px, 1)<br>join join(10px 20px, 30px 40px)<br>append append(10px 20px ,30px)<br>zip zip(1px 2px 3px,solid dashed dotted,green blue red)<br>index index(1px solid red, solid)<br>type-of type-of(100)<br>unit 取单位<br>unitless 判断一个值是否带有单位<br>comparable 判断两个数是否可以进行加减合并<br>if(true,1px,2px)<br>Maps 函数<br>map-get<br>map-has-key<br>map-keys<br>map-values<br>map-merge<br>map-remove<br>keywords<br>$map: (<br>  $key1: value1,<br>  $key2: value2,<br>  $key3: value3<br>)</p>
+<p>$map: (<br>  key1: value1,<br>  key2: (<br>    key-1: value-1,<br>    key-2: value-2,<br>  ),<br>key3: value3<br>);</p>
+<p>$theme-color: (<br>  default: (<br>      bgcolor: #fff,<br>      text-color: #444,<br>      link-color: #39f<br>  ),<br>  primary:(<br>      bgcolor: #000,<br>      text-color:#fff,<br>      link-color: #93f<br>  ),<br>  negative: (<br>      bgcolor: #f36,<br>      text-color: #fefefe,<br>      link-color: #d4e<br>  )<br>);</p>
+<p>/<em> map-get </em>/<br>$social-colors: (<br>  dribble: #ea4c89,<br>  facebook: #3b5998,<br>  github: #171515,<br>  google: #db4437,<br>  twitter: #55acee<br>);<br>.btn-dribble{<br>  color: map-get($social-colors,facebook);<br>}<br>/<em> 没有值不会报错 </em>/<br>.btn-weibo{<br>  font-size: 12px;<br>  color: map-get($social-colors,weibo);<br>}</p>
+<p>/<em> map中的容错函数 </em>/<br>@function colors($color){<br>  @if not map-has-key($social-colors,$color){<br>      @warn “No color found for <code>#{$color}</code> in $social-colors map. Property omitted.”;<br>  }<br>  @return map-get($social-colors,$color);<br>}<br>.btn-dribble {<br>  color: colors(dribble);<br>}<br>/<em> each 遍历 map </em>/<br>@each $name in map-keys($social-colors){<br>  .btn-#{$name}{<br>      color: colors($name);<br>  }<br>}<br>@for $i from 1 through length(map-keys($social-colors)){<br>  .btn-#{nth(map-keys($social-colors),$i)} {<br>    color: colors(nth(map-keys($social-colors),$i));<br>  }<br>}</p>
+<p>map-values($social-colors)<br>/<em>得到所有的值</em>/<br>$color: (<br>  text: #f36,<br>  link: #f63,<br>  border: #ddd,<br>  backround: #fff<br>);<br>$typo:(<br>  font-size: 12px,<br>  line-height: 1.6<br>);<br>$newcolor = map-merge($color, $typo);<br>/<em> 得到新值 </em>/<br>$map:map-remove($social-colors,dribble);<br>颜色函数<br>rgb<br>rgba<br>red<br>green<br>blue<br>mix 混合两种颜色 第三个参数为第一种颜色的比例 mix(blue,red,20%)</p>
+<p>lighten lighten(red, 20%);<br>darken darken(red,30%);</p>
+<p>saturate 改变颜色的饱和度 参数单位为百分比 saturate(blue,20%)<br>desaturate</p>
+<p>adjust-hue 通过调整色相 adjust-hue(blue,30deg)</p>
+<p>grayscale 直接让饱和度为0 grayscale(blue);<br>alpha 获取透明度<br>opacity 获取透明度<br>rgba<br>opacify 增加透明度<br>fade-in 增加透明度<br>transparentize 减少透明度<br>fade-out 减少透明度</p>
+<p><ul class="swatches red"><br>  <li></li><br>  …<br>  <li></li><br></ul></p>
+<p><ul class="swatches orange"><br>  <li></li><br>  …<br>  <li></li><br></ul></p>
+<p><ul class="swatches yellow"><br>  <li></li><br>  …<br>  <li></li><br></ul></p>
+<p><ul class="swatches green"><br>  <li></li><br>  …<br>  <li></li><br></ul></p>
+<p><ul class="swatches blue"><br>  <li></li><br>  …<br>  <li></li><br></ul></p>
+<p><ul class="swatches purple"><br>  <li></li><br>  …<br>  <li></li><br></ul><br>$redBase: #DC143C;<br>$orangeBase: saturate(lighten(adjust_hue($redBase, 39), 5), 7);//#f37a16<br>$yellowBase: saturate(lighten(adjust_hue($redBase, 64), 6), 13);//#fbdc14<br>$greenBase: desaturate(darken(adjust_hue($redBase, 102), 2), 11);//#73c620<br>$blueBase: saturate(darken(adjust_hue($redBase, 201), 2), 1);//#12b7d4<br>$purpleBase: saturate(darken(adjust_hue($redBase, 296), 2), 1);//#a012d4<br>$blackBase: #777;<br>$bgc: #fff;</p>
+<p>//定义颜色变暗的 mixin<br>@mixin swatchesDarken($color) {<br>  @for $i from 1 through 10 {<br>    $x:$i+11;<br>    li:nth-child(#{$x}) {<br>      $n:$i<em>5;<br>      $bgc:darken($color,$n); //颜色变暗<br>      background-color: $bgc;<br>      &amp;:hover:before { //hover状态显示颜色编号<br>        content: “#{$bgc}”;<br>        color: lighten($bgc,40);<br>        font-family: verdana;<br>        font-size: 8px;<br>        padding: 2px;<br>      }<br>    }<br>  }<br>}<br>//定义颜色变亮的 mixin<br>@mixin swatchesLighten($color) {<br>  @for $i from 1 through 10 {<br>    $x:11-$i;<br>    li:nth-child(#{$x}) {<br>      $n:$i</em>5;<br>      $bgc:lighten($color,$n);<br>      background-color: $bgc;<br>      &amp;:hover:before {<br>        content: “#{$bgc}”;<br>        color: darken($bgc,40);<br>        font-family: verdana;<br>        font-size: 8px;<br>        padding: 2px;<br>      }<br>    }<br>  }<br>}</p>
+<p>.swatches li {<br>  width: 4.7619047619%;<br>  float: left;<br>  height: 60px;<br>  list-style: none outside none;<br>}</p>
+<p>ul.red {<br>  @include swatchesLighten($redBase);<br>  @include swatchesDarken($redBase);<br>  li:nth-child(11) {<br>    background-color: $redBase;<br>  }<br>}</p>
+<p>ul.orange {<br>  @include swatchesLighten($orangeBase);<br>  @include swatchesDarken($orangeBase);<br>  li:nth-child(11) {<br>    background-color: $orangeBase;<br>  }<br>}</p>
+<p>ul.yellow {<br>  @include swatchesLighten($yellowBase);<br>  @include swatchesDarken($yellowBase);<br>  li:nth-child(11) {<br>    background-color: $yellowBase;<br>  }<br>}</p>
+<p>ul.green {<br>  @include swatchesLighten($greenBase);<br>  @include swatchesDarken($greenBase);<br>  li:nth-child(11) {<br>    background-color: $greenBase;<br>  }<br>}</p>
+<p>ul.blue {<br>  @include swatchesLighten($blueBase);<br>  @include swatchesDarken($blueBase);<br>  li:nth-child(11) {<br>    background-color: $blueBase;<br>  }<br>}</p>
+<p>ul.purple {<br>  @include swatchesLighten($purpleBase);<br>  @include swatchesDarken($purpleBase);<br>  li:nth-child(11) {<br>    background-color: $purpleBase;<br>  }<br>}</p>
+<p>ul.black {<br>  @include swatchesLighten($blackBase);<br>  @include swatchesDarken($blackBase);<br>  li:nth-child(11) {<br>    background-color: $blackBase;<br>  }<br>}</p>
+<ol>
+<li>Sass的@规则<br>@import</li>
+</ol>
+<p>@media</p>
+<p>.sidebar {<br>  width: 300px;<br>  @media screen and (orientation: landscape) {<br>    width: 500px;<br>  }<br>}<br>@media screen {<br>  .sidebar {<br>    @media (orientation: landscape) {<br>      width: 500px;<br>    }<br>  }<br>}</p>
+<p>$media: screen;<br>$feature: -webkit-min-device-pixel-ratio;<br>$value: 1.5;</p>
+<p>@media #{$media} and ($feature: $value) {<br>  .sidebar {<br>    width: 500px;<br>  }<br>}<br>@extend</p>
+<p>@at-root</p>
+<p>@debug</p>
+<p>@warn</p>
+<p>@error</p>
+<p>@content</p>
+<p>$small : 750px;<br>@mixin  onsmall {<br>  @media  only screen and (max-width: $small){<br>    @content;<br>  }<br>}</p>
+<p>.navbar-content{<br>  max-width:980px;<br>  @include onsmall {<br>    min-width:320px;<br>  }<br>}<br>@mixin useRem($size){<br>  $device-list : 320px, 375px , 414px;<br>  html{<br>    @each $device in $device-list{<br>      @media screen and (min-width: $device){<br>        font-size: 100px * ($device/$size);<br>      }<br>    }<br>  }<br>}<br>@include useRem(750px);</p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/01/12/react/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2018/01/12/plugin/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="https://github.com/sun142725" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="18334771358@163.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/"><i class="fa" aria-hidden="true">April 2018</i></a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/android/" style="font-size: 12.5px;">android</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/javascripts/" style="font-size: 12.5px;">javascripts</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/module/" style="font-size: 10px;">module</a> <a href="/tags/mui/" style="font-size: 10px;">mui</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/plugin/" style="font-size: 10px;">plugin</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/server/" style="font-size: 17.5px;">server</a> <a href="/tags/video/" style="font-size: 12.5px;">video</a> <a href="/tags/webGL/" style="font-size: 20px;">webGL</a> <a href="/tags/week/" style="font-size: 12.5px;">week</a> <a href="/tags/兼容/" style="font-size: 12.5px;">兼容</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

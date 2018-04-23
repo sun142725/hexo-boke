@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>孙继红</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-04-23T07:46:48.435Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Almighty Father</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue</title>
+    <link href="http://yoursite.com/2018/04/23/vue/"/>
+    <id>http://yoursite.com/2018/04/23/vue/</id>
+    <published>2018-04-23T07:46:48.434Z</published>
+    <updated>2018-04-23T07:46:48.435Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/opendigg/awesome-github-vue#UI%E7%BB%84%E4%BB%B6" target="_blank" rel="noopener">vue实例、教程、实用库</a></p><ul><li>双向数据绑定  <code>Object.defineProperty</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://github.com/opendigg/awesome-github-vue#UI%E7%BB%84%E4%BB%B6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;vue实例、教程、实用库&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>socket 入门</title>
+    <link href="http://yoursite.com/2018/04/23/socket/"/>
+    <id>http://yoursite.com/2018/04/23/socket/</id>
+    <published>2018-04-23T07:46:48.412Z</published>
+    <updated>2018-04-23T07:46:48.413Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="聊天功能实现"><a href="#聊天功能实现" class="headerlink" title="聊天功能实现"></a>聊天功能实现</h1><h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var express = require(<span class="string">'express'</span>)</span><br><span class="line">var app = express()</span><br><span class="line">var server = require(<span class="string">'http'</span>).Server(app)</span><br><span class="line">var io = require(<span class="string">'socket.io'</span>)(server, &#123;</span><br><span class="line">    pingInterval: 1000</span><br><span class="line">&#125;)</span><br><span class="line">$ 一个简易聊天室</span><br><span class="line">io.on(<span class="string">'connection'</span>, <span class="keyword">function</span>(socket) &#123;</span><br><span class="line">    socket.on(<span class="string">'content'</span>, <span class="keyword">function</span> (data) &#123;</span><br><span class="line">        console.log(data)</span><br><span class="line">        socket.broadcast.emit(<span class="string">'news'</span>, &#123;hello: data&#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="keyword">function</span>(req, res)&#123;</span><br><span class="line">    res.sendFile(__dirname+<span class="string">'/index.html'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">server.listen(18080, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    console.log(<span class="string">'服务器在18080端口启动'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h3 id="client"><a href="#client" class="headerlink" title="client"></a>client</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const socket = io.connect(<span class="string">'http://192.168.1.177:18080'</span>)</span><br><span class="line">socket.on(<span class="string">'news'</span>, <span class="keyword">function</span> (data) &#123;</span><br><span class="line">            console.log(data)</span><br><span class="line">        &#125;)</span><br><span class="line">        socket.emit(<span class="string">'content'</span>, &#123;content: value&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;聊天功能实现&quot;&gt;&lt;a href=&quot;#聊天功能实现&quot; class=&quot;headerlink&quot; title=&quot;聊天功能实现&quot;&gt;&lt;/a&gt;聊天功能实现&lt;/h1&gt;&lt;h3 id=&quot;server&quot;&gt;&lt;a href=&quot;#server&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+    
+      <category term="server" scheme="http://yoursite.com/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器上运行程序</title>
+    <link href="http://yoursite.com/2018/04/23/node-server/"/>
+    <id>http://yoursite.com/2018/04/23/node-server/</id>
+    <published>2018-04-23T07:46:48.395Z</published>
+    <updated>2018-04-23T07:46:48.395Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="node服务后台运行"><a href="#node服务后台运行" class="headerlink" title="node服务后台运行"></a>node服务后台运行</h3><ul><li>使用forever<br><code>npm install forever -g</code></li><li>启动服务<br><code>forever start index.js</code></li><li>停止服务<br><code>forever stop index.js</code></li><li>启动js文件并输出日志文件<br><code>forever start -l forever.log -o out.log -e err.log index.js</code></li><li>重启js文件<br><code>forever restart index.js</code></li><li>查看正在运行的进程<br><code>forever list</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;node服务后台运行&quot;&gt;&lt;a href=&quot;#node服务后台运行&quot; class=&quot;headerlink&quot; title=&quot;node服务后台运行&quot;&gt;&lt;/a&gt;node服务后台运行&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;使用forever&lt;br&gt;&lt;code&gt;npm install f
+      
+    
+    </summary>
+    
+    
+      <category term="server" scheme="http://yoursite.com/tags/server/"/>
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mongodb 入门</title>
+    <link href="http://yoursite.com/2018/04/23/mongodb/"/>
+    <id>http://yoursite.com/2018/04/23/mongodb/</id>
+    <published>2018-04-23T07:46:48.385Z</published>
+    <updated>2018-04-23T07:46:48.386Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.runoob.com/mongodb/mongodb-window-install.html" target="_blank" rel="noopener">windows 安装mongodb</a></p><p><a href="http://www.nodeclass.com/api/mongoose.html" target="_blank" rel="noopener">mongoose 文档</a><br><a href="http://www.mongoing.com/" target="_blank" rel="noopener">mongodb中文社区</a></p><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="常用的数据类型"><a href="#常用的数据类型" class="headerlink" title="常用的数据类型"></a>常用的数据类型</h3><ul><li>String 字符串</li><li>Integer 整数型值</li><li>Boolean 布尔值</li><li>Double 双精度浮点值</li><li>Min/Max keys 将一个值与 BSON（二进制的 JSON）元素的最低值和最高值相对比。</li><li>Arrays 用于将数组或列表或多个值存储为一个键</li><li>Timestamp 记录文档或添加的具体时间</li><li>Object 用于内嵌文档</li><li>Null 用于空值</li><li>Symbol 符号。该数据类型基本上等同于字符串类型，但不同的是，它一般用于采用特殊符号类型的语言。</li><li>Date 时间日期用 UNIX 时间格式来存储当前日期或时间。你可以指定自己的日期时间：创建 Date 对象，传入年月日信息。</li><li>Object ID 对象Id用于创建文档id</li><li>Binary Data 二进制数据</li><li>Code 代码类型。用于在文档中存储javascript代码</li><li>Regular expression 用于存储正则<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mongod --logpath=/data/db/<span class="built_in">log</span>/mongod.log --logappend --fork   //在服务器后台进程中打开</span><br><span class="line">mongo  // 进入MongoDB后台管理</span><br></pre></td></tr></table></figure></li></ul><h3 id="链接数据库"><a href="#链接数据库" class="headerlink" title="链接数据库"></a>链接数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var mongoose = require(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/totoro'</span>)     //连接本地数据库totoro</span><br><span class="line"></span><br><span class="line">var db = mongoose.connection;</span><br><span class="line"></span><br><span class="line">module.exports = db;</span><br></pre></td></tr></table></figure><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var mongoose = require(<span class="string">'mongoose'</span>);</span><br><span class="line">var Schema = mongoose.Schema;</span><br><span class="line">var userSchema = new Schema(&#123;</span><br><span class="line">    username: &#123;</span><br><span class="line">        <span class="built_in">type</span>: String,</span><br><span class="line">        unique: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    password: &#123;</span><br><span class="line">        <span class="built_in">type</span>: String</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">// 将数据模型暴露出去</span><br><span class="line">module.exports = mongoose.model(<span class="string">'users'</span>, userSchema);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.runoob.com/mongodb/mongodb-window-install.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;windows 安装mongodb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="server" scheme="http://yoursite.com/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>直播</title>
+    <link href="http://yoursite.com/2018/04/23/live/"/>
+    <id>http://yoursite.com/2018/04/23/live/</id>
+    <published>2018-04-23T07:46:48.375Z</published>
+    <updated>2018-04-23T07:46:48.376Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://segmentfault.com/a/1190000011346597" target="_blank" rel="noopener">参考文档</a><br><a href="https://www.jianshu.com/p/bd42bacbe4cc" target="_blank" rel="noopener">快速的开发一个完整的直播ios app</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000011346597&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;参考文档&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/bd42b
+      
+    
+    </summary>
+    
+    
+      <category term="video" scheme="http://yoursite.com/tags/video/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux基础操作</title>
+    <link href="http://yoursite.com/2018/04/23/linux/"/>
+    <id>http://yoursite.com/2018/04/23/linux/</id>
+    <published>2018-04-23T07:46:48.372Z</published>
+    <updated>2018-04-23T07:46:48.373Z</updated>
+    
+    <content type="html"><![CDATA[<p>基础操作<br><a href="http://www.runoob.com/linux/linux-filesystem.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="http://blog.csdn.net/xsj_blog/article/details/52141501" target="_blank" rel="noopener">CSDN博客</a></p><h3 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h3><ul><li>查找文件 <code>which</code></li><li>查看当前文件所在目录 <code>pwd</code></li><li>sudo</li><li>yes <code>-y</code></li><li>删除 <code>rm</code></li><li>强制删除 <code>rm -rf</code></li><li>创建目录 <code>mkdir</code></li><li>分页显示文本文件内容 <code>more</code>、<code>less</code></li><li>清除信息 <code>clear</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;基础操作&lt;br&gt;&lt;a href=&quot;http://www.runoob.com/linux/linux-filesystem.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.
+      
+    
+    </summary>
+    
+    
+      <category term="server" scheme="http://yoursite.com/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React</title>
+    <link href="http://yoursite.com/2018/04/23/hello-world/"/>
+    <id>http://yoursite.com/2018/04/23/hello-world/</id>
+    <published>2018-04-23T07:46:48.358Z</published>
+    <updated>2018-04-23T07:46:48.359Z</updated>
+    
+    <content type="html"><![CDATA[<p>搭建React自动化开发环境</p><p>package.json</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ &#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">    <span class="string">"main"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span>,</span><br><span class="line">    <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">      <span class="string">"babel-core"</span>: <span class="string">"^6.18.2"</span>,</span><br><span class="line">      <span class="string">"babel-loader"</span>: <span class="string">"^6.2.8"</span>,</span><br><span class="line">      <span class="string">"babel-preset-es2015"</span>: <span class="string">"^6.18.0"</span>,</span><br><span class="line">      <span class="string">"babel-preset-react"</span>: <span class="string">"^6.16.0"</span>,</span><br><span class="line">      <span class="string">"body-parser"</span>: <span class="string">"^1.15.2"</span>,</span><br><span class="line">      <span class="string">"react"</span>: <span class="string">"^15.4.1"</span>,</span><br><span class="line">      <span class="string">"react-dom"</span>: <span class="string">"^15.4.1"</span>,</span><br><span class="line">      <span class="string">"react-redux"</span>: <span class="string">"^4.4.6"</span>,</span><br><span class="line">      <span class="string">"redux"</span>: <span class="string">"^3.6.0"</span>,</span><br><span class="line">      <span class="string">"webpack"</span>: <span class="string">"^1.14.0"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>webpack.config.js</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">$ const webpack = require(<span class="string">'webpack'</span>);</span><br><span class="line">   module.exports = &#123;</span><br><span class="line">     entry: &#123;</span><br><span class="line">       login: <span class="string">'./dev/login.jsx'</span>,</span><br><span class="line">       register: <span class="string">'./dev/register.jsx'</span>,</span><br><span class="line">       admin: <span class="string">'./dev/admin.jsx'</span></span><br><span class="line">     &#125;,</span><br><span class="line">     output: &#123;</span><br><span class="line">       path: <span class="string">'./static/js/admin/'</span>,</span><br><span class="line">       filename: <span class="string">'[name].js'</span></span><br><span class="line">     &#125;,</span><br><span class="line">     module: &#123;</span><br><span class="line">       loaders: [&#123;</span><br><span class="line">         <span class="built_in">test</span>: /\.js[x]?$/,</span><br><span class="line">         exclude: /node_modules/,</span><br><span class="line">         loader: <span class="string">'babel-loader?presets[]=es2015&amp;presets[]=react'</span></span><br><span class="line">       &#125;]</span><br><span class="line">     &#125;,</span><br><span class="line">     plugins: [</span><br><span class="line">       // new webpack.DefinePlugin(&#123;</span><br><span class="line">       //   <span class="string">'process.env'</span>: &#123;</span><br><span class="line">       //     <span class="string">'NODE_ENV'</span>: JSON.stringify(<span class="string">'production'</span>)</span><br><span class="line">       //   &#125;</span><br><span class="line">       // &#125;),</span><br><span class="line">       // new webpack.optimize.UglifyJsPlugin(&#123;</span><br><span class="line">       //   compress: &#123;</span><br><span class="line">       //     warnings: <span class="literal">true</span></span><br><span class="line">       //   &#125;</span><br><span class="line">       // &#125;)</span><br><span class="line">       // new webpack.SourceMapDevToolPlugin(&#123;</span><br><span class="line">       //   // Match assets just like <span class="keyword">for</span> loaders.</span><br><span class="line">       //   <span class="built_in">test</span>: string | RegExp | Array,</span><br><span class="line">       //   include: string | RegExp | Array,</span><br><span class="line">       //</span><br><span class="line">       //   // `exclude` matches file names, not package names!</span><br><span class="line">       //   exclude: string | RegExp | Array,</span><br><span class="line">       //</span><br><span class="line">       //   // If filename is <span class="built_in">set</span>, output to this file.</span><br><span class="line">       //   // See `sourceMapFileName`.</span><br><span class="line">       //   filename: string,</span><br><span class="line">       //</span><br><span class="line">       //   // This line is appended to the original asset processed. For</span><br><span class="line">       //   // instance <span class="string">'[url]'</span> would get replaced with an url to the</span><br><span class="line">       //   // sourcemap.</span><br><span class="line">       //   append: <span class="literal">false</span> | string,</span><br><span class="line">       //</span><br><span class="line">       //   // See `devtoolModuleFilenameTemplate` <span class="keyword">for</span> specifics.</span><br><span class="line">       //   moduleFilenameTemplate: string,</span><br><span class="line">       //   fallbackModuleFilenameTemplate: string,</span><br><span class="line">       //</span><br><span class="line">       //   module: bool, // If <span class="literal">false</span>, separate sourcemaps aren<span class="string">'t generated.</span></span><br><span class="line"><span class="string">       //   columns: bool, // If false, column mappings are ignored.</span></span><br><span class="line"><span class="string">       //</span></span><br><span class="line"><span class="string">       //   // Use simpler line to line mappings for the matched modules.</span></span><br><span class="line"><span class="string">       //   lineToLine: bool | &#123;test, include, exclude&#125;</span></span><br><span class="line"><span class="string">       // &#125;)</span></span><br><span class="line"><span class="string">     ]</span></span><br><span class="line"><span class="string">   &#125;;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;搭建React自动化开发环境&lt;/p&gt;
+&lt;p&gt;package.json&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://yoursite.com/2018/04/23/git/"/>
+    <id>http://yoursite.com/2018/04/23/git/</id>
+    <published>2018-04-23T07:46:48.352Z</published>
+    <updated>2018-04-23T07:46:48.353Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="noopener">阮一峰</a></p><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><ul><li>创建仓库<br><code>git init</code></li><li>克隆<br>git clone</li><li>添加或删除<br><code>git add .</code>   <code>git add *</code>  <code>git add &lt;file&gt;</code></li><li>检查<br>注意多用git status 检查上传内容以及所在分支<br><code>git status</code></li><li>创建分支<br><code>git branch &lt;name&gt;</code></li><li>切换分支<br><code>git checkout &lt;name&gt;</code><br><code>git checkout -b &lt;name&gt;</code> 创建并切换</li><li>检查当前分支<br><code>git branch</code><br>commit</li><li>只要有变化就必须commit<br><code>git commit -m &quot;&quot;</code></li><li>push<br>push前看好所在分支<br>第一次推送前注意<br><code>git push -u origin master</code><br><code>git push</code></li></ul><h3 id="在服务器搭建git环境"><a href="#在服务器搭建git环境" class="headerlink" title="在服务器搭建git环境"></a>在服务器搭建git环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ 1.安装</span><br><span class="line">  sudo apt-get install git</span><br><span class="line">$ 2 设置账号密码</span><br><span class="line">  useradd -m &lt;account&gt;</span><br><span class="line">  passwd &lt;account&gt;</span><br><span class="line">$ 3 创建 git 仓库并初始化</span><br><span class="line">  mkdir -p /data/repositories</span><br><span class="line">  初始化  <span class="built_in">cd</span> /data/repositories/ &amp;&amp; git init --bare test.git</span><br><span class="line">  * git init --bare test.git初始化的远程仓库没有工作目录</span><br><span class="line">$ 4 配置用户权限</span><br><span class="line">  chown -R &lt;account&gt;:&lt;account&gt; /data/repositories</span><br><span class="line">  chmod 755 /data/repositories</span><br><span class="line">  查找git-shell所在目录，编辑/etc/passwd文件，将最后一行关于《account》de denglu shell配置改为git-shell目录下  使用<span class="built_in">which</span> git-shell查看文件位置</span><br><span class="line">  实例： gituser:x:500:500::/home/gituser:/usr/<span class="built_in">local</span>/git/bin/git-shell</span><br><span class="line">$ 5 蒋项目克隆到本地</span><br><span class="line">  git <span class="built_in">clone</span> &lt;account&gt;@&lt;您的 CVM IP 地址&gt;:/data/repositories/test.git</span><br></pre></td></tr></table></figure><h3 id="insufficient-permission-for-adding-an-object"><a href="#insufficient-permission-for-adding-an-object" class="headerlink" title="insufficient permission for adding an object"></a>insufficient permission for adding an object</h3><p>  原因  git库权限问题  <code>ls -la</code>查看权限<br>  解决  sudo chown -R <account>:<account> /data/repositories</account></account></p><h3 id="在服务器初始化有工作目录的git仓库"><a href="#在服务器初始化有工作目录的git仓库" class="headerlink" title="在服务器初始化有工作目录的git仓库"></a>在服务器初始化有工作目录的git仓库</h3><ul><li><h1 id="远程服务器初始化仓库"><a href="#远程服务器初始化仓库" class="headerlink" title="远程服务器初始化仓库"></a>远程服务器初始化仓库</h1><p> git init &lt;仓库名&gt;</p><h1 id="设置允许远程接收文件"><a href="#设置允许远程接收文件" class="headerlink" title="设置允许远程接收文件"></a>设置允许远程接收文件</h1><p> git config receive.denyCurrentBranch ignore</p></li><li><p>在远程仓库,post-receive 钩子文件中添加自动更新工作目录内容<br>$ cd /home/git/test.git/hooks/<br>$ vim post-receive<br>WORK_TREE=’../‘<br>git  –work-tree=”${WORK_TREE}” reset –hard</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/06/git_remote.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阮一峰&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git遇到的问题</title>
+    <link href="http://yoursite.com/2018/04/23/git-problem/"/>
+    <id>http://yoursite.com/2018/04/23/git-problem/</id>
+    <published>2018-04-23T07:46:48.350Z</published>
+    <updated>2018-04-23T07:46:48.351Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>fatal: The remote end hung up unexpectedly解决内存不够</code>解决办法<br><code>git config --global http.postBuffer 524288000</code><br><code>git config --global https.postBuffer 1048576000</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;fatal: The remote end hung up unexpectedly
+解决内存不够&lt;/code&gt;解决办法&lt;br&gt;&lt;code&gt;git config --global http.postBuffer 524288000&lt;/code&gt;&lt;br&gt;&lt;code
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>3D模型</title>
+    <link href="http://yoursite.com/2018/04/20/three6/"/>
+    <id>http://yoursite.com/2018/04/20/three6/</id>
+    <published>2018-04-19T16:00:00.000Z</published>
+    <updated>2018-04-23T07:46:48.431Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://sketchup.google.com/3dwarehouse/" target="_blank" rel="noopener">google的3D模型库</a><br><a href="http://www.hewebgl.com/article/getarticle/105" target="_blank" rel="noopener">chrome浏览器加载本地文件</a></p><h3 id="3D模型查看器"><a href="#3D模型查看器" class="headerlink" title="3D模型查看器"></a>3D模型查看器</h3><p>3D-Max,Maya  推荐使用 ParaView</p><h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><p>模型是由面组成，面分为三角形和四边形面。三角形和四边形面组成了网格模型。在Three.js中用THREE.Mesh来表示网格模型。THREE.Mesh可以和THREE.Line相提并论，区别是THREE.Line表示的是线条。THREE.Mesh表示面的集合。<br><code>THREE.Mesh = function ( geometry, material )</code> // 接受两个参数  geometry 几何体 material  材质</p><h3 id="模型的加载"><a href="#模型的加载" class="headerlink" title="模型的加载"></a>模型的加载</h3><p><img src="http://www.hewebgl.com/attached/image/20140911/20140911145108_465.png" alt="模型加载过程"><br>注意：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、服务器上的模型文件大多是存储的模型的顶点信息，这些信息可以以文本的方式存储的（并不一定需要用文本的方式存储）。Three.js支持很多种3D模型格式，例如ply，stl，obj，vtk等等。随着three.js的升级，会支持越来越多的文件格式，到目前为止，three.js已经能够支持市面上大多数3D模型格式了。</span><br><span class="line"></span><br><span class="line">同时需要重点说明的是，如果认真理解完three.js对模型的加载、解析方法，那么写一种自己的3D文件解析器是非常便利的。</span><br><span class="line"></span><br><span class="line">2、第二步是浏览器下载文本文件，这是一件很普通的事情，只需要使用javascript的异步请求就可以实现了。</span><br><span class="line"></span><br><span class="line">3、Javascript解析文本文件并生成一个geometry，最终生成Mesh，也是一件简单的事情。我们会在后面介绍这个过程。</span><br><span class="line"></span><br><span class="line">4、当产生Mesh后，将其加入到场景中，那就非常简单了。</span><br><span class="line"></span><br><span class="line">Ok，整个模型的加载思路就是这样。</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://sketchup.google.com/3dwarehouse/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;google的3D模型库&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.hewebgl.com/arti
+      
+    
+    </summary>
+    
+    
+      <category term="webGL" scheme="http://yoursite.com/tags/webGL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三维空间的观察</title>
+    <link href="http://yoursite.com/2018/04/19/three3/"/>
+    <id>http://yoursite.com/2018/04/19/three3/</id>
+    <published>2018-04-18T16:00:00.000Z</published>
+    <updated>2018-04-23T07:46:48.422Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.hewebgl.com/article/getarticle/59" target="_blank" rel="noopener">学习地址:webGL中文网链接</a></p><h3 id="1、-认识相机"><a href="#1、-认识相机" class="headerlink" title="1、 认识相机"></a>1、 认识相机</h3><p>相机  THREE.Camera  分为两类，正投影相机(THREE.OrthographicCamera)和透视投影相机(THREE.PerspectiveCamera)<br><img src="http://www.hewebgl.com/attached/image/20130530/20130530145454_509.png" alt="两种相机的区别"></p><h3 id="2、-两者的区别"><a href="#2、-两者的区别" class="headerlink" title="2、 两者的区别"></a>2、 两者的区别</h3><p>由上图可以看出透视投影远处比近处要小；而正投影的特点是远近高低比例都一样<br>在建筑工程领域，正投影例子很多，例如：<br><img src="http://www.hewebgl.com/attached/image/20130530/20130530145820_901.jpg" alt="正投影示例"></p><h3 id="3、正投影相机"><a href="#3、正投影相机" class="headerlink" title="3、正投影相机"></a>3、正投影相机</h3><p>构造函数 <code>OrthographicCamera(left,right,top,bottom,near,far)</code><br>中文网实例的图特别清晰 <img src="http://www.hewebgl.com/attached/image/20130530/20130530145859_920.jpg" alt="投影详解"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1、 left参数</span><br><span class="line">left：左平面距离相机中心点的垂直距离。从图中可以看出，左平面是屏幕里面的那个平面。</span><br><span class="line">2、 right参数</span><br><span class="line">right：右平面距离相机中心点的垂直距离。从图中可以看出，右平面是屏幕稍微外面一点的那个平面。</span><br><span class="line">3、 top参数</span><br><span class="line">top：顶平面距离相机中心点的垂直距离。上图中的顶平面，是长方体头朝天的平面。</span><br><span class="line">4、 bottom参数</span><br><span class="line">bottom：底平面距离相机中心点的垂直距离。底平面是头朝地的平面。</span><br><span class="line">5、near参数</span><br><span class="line">near：近平面距离相机中心点的垂直距离。近平面是左边竖着的那个平面。</span><br><span class="line">6、far参数</span><br><span class="line">far：远平面距离相机中心点的垂直距离。远平面是右边竖着的那个平面。</span><br><span class="line">有了这些参数和相机中心点，我们这里将相机的中心点又定义为相机的位置。通过这些参数，我们就能够在三维空间中唯一的确定上图的一个长方体。这个长方体也叫做视景体。</span><br><span class="line">投影变换的目的就是定义一个视景体，使得视景体外多余的部分裁剪掉，最终图像只是视景体内的有关部分。</span><br><span class="line">好了，看一个简单的例子：</span><br><span class="line">var camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, 1, 1000 );</span><br><span class="line">scene.add( camera );</span><br><span class="line">这个例子将浏览器窗口的宽度和高度作为了视景体的高度和宽度，相机正好在窗口的中心点上。这也是我们一般的设置方法，基本上为了方便，我们不会设置其他的值。</span><br></pre></td></tr></table></figure></p><h3 id="4、透视投影相机"><a href="#4、透视投影相机" class="headerlink" title="4、透视投影相机"></a>4、透视投影相机</h3><p>PerspectiveCamera( fov, aspect, near, far )<br>中文网实例的图特别清晰 <img src="http://www.hewebgl.com/attached/image/20130530/20130530151418_279.jpg" alt="投影详解"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ fov(视角)：这个最难理解,我的理解是,眼睛睁开的角度,即,视角的大小,如果设置为0,相当你闭上眼睛了,所以什么也看不到,如果为180,那么可以认为你的视界很广阔,但是在180度的时候，往往物体很小，因为他在你的整个可视区域中的比例变小了。</span><br><span class="line">$ aspect(纵横比)： 窗口的横纵比，即宽除以高</span><br><span class="line">$ near(近平面)： 眼睛距离近处的距离，不能为负值</span><br><span class="line">$ far（远平面）： 表示远处的裁面</span><br></pre></td></tr></table></figure></p><p>正投影和透视投影<br><img src="http://www.hewebgl.com/attached/image/20130530/20130530160142_562.jpg" alt="正投影">   <img src="http://www.hewebgl.com/attached/image/20130530/20130530160818_221.jpg" alt="透视投影"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.hewebgl.com/article/getarticle/59&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;学习地址:webGL中文网链接&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1、-认识相机&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="webGL" scheme="http://yoursite.com/tags/webGL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>五彩的光源</title>
+    <link href="http://yoursite.com/2018/04/19/three4/"/>
+    <id>http://yoursite.com/2018/04/19/three4/</id>
+    <published>2018-04-18T16:00:00.000Z</published>
+    <updated>2018-04-23T07:46:48.425Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.hewebgl.com/article/getarticle/60" target="_blank" rel="noopener">文档地址</a></p><h3 id="1、光源的基类"><a href="#1、光源的基类" class="headerlink" title="1、光源的基类"></a>1、光源的基类</h3><p>在three.js中，光源用Light来表示,它是所有光源的基类。构造函数<code>THREE.Light(hex)</code><br>他有一个参数hex，接收一个16进制的颜色，如：<br>var light = new THREE.Light(0xFF0000)</p><h3 id="2、有基类派生出的其他种类光源"><a href="#2、有基类派生出的其他种类光源" class="headerlink" title="2、有基类派生出的其他种类光源"></a>2、有基类派生出的其他种类光源</h3><ul><li>THREE.AmbientLight(环境光)</li><li>THREE.AreaLight(区域光)</li><li>THREE.DirectionLight(方向光)</li><li>THREE.PointLight(点光源)</li><li>THREE.SpotLight(聚光灯)<h3 id="3、材质和光源的关系"><a href="#3、材质和光源的关系" class="headerlink" title="3、材质和光源的关系"></a>3、材质和光源的关系</h3><blockquote><p>材质：在渲染程序中，他是表面各可视属性的结合，这些可视属性指表面的色彩、纹理、光滑度、透明度、反射率、折射率、发光度等。正是有了这些属性，才能让我们识别三维中的模型是什么做成的，也正是有了这些属性，我们计算机三维的虚拟世界才会和真实世界一样缤纷多彩</p></blockquote></li></ul><p>材质的真相=====&gt;光</p><h4 id="不带任何光源的物体"><a href="#不带任何光源的物体" class="headerlink" title="不带任何光源的物体"></a>不带任何光源的物体</h4><p>var material = new THREE.MeshLambertMaterial({color: 0x000000}) // 兰伯特材质<br><img src="http://www.hewebgl.com/attached/image/20130515/20130515170232_15.png" alt="结果图"></p><p>没有任何光源的时候，不论材质什么颜色，结果都将是黑色</p><h4 id="兰伯特材质与光源"><a href="#兰伯特材质与光源" class="headerlink" title="兰伯特材质与光源"></a>兰伯特材质与光源</h4><p>最常见的材质之一就是Lambert材质，这是在灰暗的或不光滑的表面产生均匀散射而形成的材质类型。比如一张纸就是Lambert表面。 首先它粗糙不均匀，不会产生镜面效果。我们在阅读书籍的时候，没有发现书上一处亮，一处不亮吧，它非常均匀，这就是兰伯特材质。</p><p>我们现在一直在使用环境光，从环境光的构造函数来看，它只有颜色，其位置对场景中的物体并没有影响，因为他是均匀的反射到物体的表面的。</p><h4 id="环境光对物体的影响"><a href="#环境光对物体的影响" class="headerlink" title="环境光对物体的影响"></a>环境光对物体的影响</h4><p>环境光就是在场景中无处不在的光，它对物体的影响是均匀的，也就是无论你从物体的那个角度观察，物体的颜色都是一样的，这就是伟大的环境光。</p><h4 id="方向光（平行光）"><a href="#方向光（平行光）" class="headerlink" title="方向光（平行光）"></a>方向光（平行光）</h4><p>构造函数： <code>var light = new THREE.DirectionLight(hex,intensity)</code></p><ul><li>hex: 光的颜色</li><li>intensity: 光线强度，（0-1）默认为1</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.hewebgl.com/article/getarticle/60&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档地址&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1、光源的基类&quot;&gt;&lt;a href=&quot;#1、光源的基类&quot; cl
+      
+    
+    </summary>
+    
+    
+      <category term="webGL" scheme="http://yoursite.com/tags/webGL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>纹理入门</title>
+    <link href="http://yoursite.com/2018/04/19/three5/"/>
+    <id>http://yoursite.com/2018/04/19/three5/</id>
+    <published>2018-04-18T16:00:00.000Z</published>
+    <updated>2018-04-23T07:46:48.427Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.hewebgl.com/article/getarticle/68" target="_blank" rel="noopener">文档地址</a></p><h3 id="纹理由图片组成"><a href="#纹理由图片组成" class="headerlink" title="纹理由图片组成"></a>纹理由图片组成</h3><p>在three.js中，纹理类由THREE.Texture表示，其构造函数如下所示<br>THREE.Texture( image, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy )<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ image: 图片类型  var image = THREE.ImageUtils.loadTexture(url); // url 是一个http://xxxx/aaa.jpg 的类似地址，javascript没有从本地加载数据的能力，所以没有办法从您电脑的C盘加载数据。</span><br><span class="line">$  mapping: THREE.UVMapping()类型，表示纹理坐标</span><br><span class="line">$  wrapS：表示x轴的纹理的回环方式，就是当纹理的宽度小于需要贴图的平面的宽度的时候，平面剩下的部分应该p以何种方式贴图的问题</span><br><span class="line">$  wrapT：表示y轴的纹理回环方式。 magFilter和minFilter表示过滤的方式，这是OpenGL的基本概念，我将在下面讲一下，目前你不用担心它的使用。当您不设置的时候，它会取默认值，所以，我们这里暂时不理睬他。</span><br><span class="line">$  format：表示加载的图片的格式，这个参数可以取值THREE.RGBAFormat，RGBFormat等。THREE.RGBAFormat表示每个像素点要使用四个分量表示，分别是红、绿、蓝、透明来表示。RGBFormat则不使用透明，也就是说纹理不会有透明的效果。</span><br><span class="line">$  <span class="built_in">type</span>：表示存储纹理的内存的每一个字节的格式，是有符号，还是没有符号，是整形，还是浮点型。不过这里默认是无符号型（THREE.UnsignedByteType）。暂时就解释到这里，有需要时，我们在仔细分析，或者给作者留言询问。</span><br><span class="line">$  anisotropy：各向异性过滤。使用各向异性过滤能够使纹理的效果更好，但是会消耗更多的内存、CPU、GPU时间，暂时就了解到这里吧</span><br></pre></td></tr></table></figure></p><p>示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var geometry = new THREE.PlaneGeometry( 500, 300, 1, 1 );</span><br><span class="line">        geometry.vertices[0].uv = new THREE.Vector2(0,0);</span><br><span class="line">        geometry.vertices[1].uv = new THREE.Vector2(2,0);</span><br><span class="line">        geometry.vertices[2].uv = new THREE.Vector2(2,2);</span><br><span class="line">        geometry.vertices[3].uv = new THREE.Vector2(0,2);</span><br><span class="line">        //  坐标纹理部分</span><br><span class="line">        //  这一块牵扯到图片的跨域 并亲javascript不能访问本地文件  Access-Control-Allow-Origin: *</span><br><span class="line">        var texture = THREE.ImageUtils.loadTexture(<span class="string">"http://www.google.cn/maps/vt/pb=!1m5!1m4!1i0!2i0!3i0!4i128!2m2!1e1!3i794!3m9!2szh-CN!3scn!5e1105!12m1!1e4!12m1!1e47!12m1!1e3!4e0!5m1!1e0"</span>,null,<span class="keyword">function</span>(t) &#123;&#125;);</span><br><span class="line">        var material = new THREE.MeshBasicMaterial(&#123;map:texture&#125;);</span><br><span class="line">        var mesh = new THREE.Mesh( geometry,material );</span><br><span class="line">        scene.add( mesh )</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.hewebgl.com/article/getarticle/68&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档地址&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;纹理由图片组成&quot;&gt;&lt;a href=&quot;#纹理由图片组成&quot; cl
+      
+    
+    </summary>
+    
+    
+      <category term="webGL" scheme="http://yoursite.com/tags/webGL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>three.js入门</title>
+    <link href="http://yoursite.com/2018/04/18/three/"/>
+    <id>http://yoursite.com/2018/04/18/three/</id>
+    <published>2018-04-17T16:00:00.000Z</published>
+    <updated>2018-04-23T07:46:48.416Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="http://www.hewebgl.com/article/getarticle/27" target="_blank" rel="noopener">webGL中文网</a></li><li><a href="https://github.com/mrdoob/three.js" target="_blank" rel="noopener">github地址</a><h2 id="webGL基础信息"><a href="#webGL基础信息" class="headerlink" title="webGL基础信息"></a>webGL基础信息</h2><h3 id="三大组建"><a href="#三大组建" class="headerlink" title="三大组建"></a>三大组建</h3></li><li>场景<br><code>var scene = new THREE.Scene()</code></li><li>相机<br>有很多种相机<br><code>var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000)</code></li><li>渲染器<br><code>var renderer = new THREE.WebGLRenderer();renderer.setSize(window.innerWidth, window.innerHeight);document.body.appendChild(renderer.domElement);</code></li><li><p>添加物体到场景中<br>`<br>var geometry = new THREE.CubeGeometry(1,1,2);  //  CubeGeometry(width, height, depth, segmentsWidth, segmentsHeight, segmentsDepth, materials, sides)<br>  // width/height/depth分别代表立方体XYZ三轴的长度，剩下的比较复杂，之后深入学习</p><p>  var material = new THREE.MeshBasicMaterial({color: 0xf65a41});<br>  var cube = new THREE.Mesh(geometry, material);<br>  scene.add(cube);<br>`</p></li><li>渲染</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">renderer.render(scene, camera);</span><br><span class="line">原型</span><br><span class="line">render( scene, camera, renderTarget, forceClear )</span><br><span class="line"></span><br><span class="line">各个参数的意义是：</span><br><span class="line"></span><br><span class="line">scene：前面定义的场景</span><br><span class="line"></span><br><span class="line">camera：前面定义的相机</span><br><span class="line"></span><br><span class="line">renderTarget：渲染的目标，默认是渲染到前面定义的render变量中</span><br><span class="line"></span><br><span class="line">forceClear：每次绘制之前都将画布的内容给清除，即使自动清除标志autoClear为<span class="literal">false</span>，也会清除。</span><br></pre></td></tr></table></figure><ul><li><p>循环渲染<br>有实时渲染和离线渲染 两种方式</p><ul><li>离线渲染  事先处理好一帧一帧的图片，然后一次性渲染</li><li>实时渲染：就是需要不停的对画面进行渲染，即使画面中什么也没有改变，也需要重新渲染。下面就是一个渲染循环：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">function</span> <span class="function"><span class="title">render</span></span>() &#123;</span><br><span class="line">    cube.rotation.x += 0.1;</span><br><span class="line">    cube.rotation.y += 0.1;</span><br><span class="line">    renderer.render(scene, camera);</span><br><span class="line">    requestAnimationFrame(render);</span><br><span class="line">&#125;</span><br><span class="line">其中一个重要的函数是requestAnimationFrame，这个函数就是让浏览器去执行一次参数中的函数，这样通过上面render中调用requestAnimationFrame()函数，requestAnimationFrame()函数又让rander()再执行一次，就形成了我们通常所说的游戏循环了。// 本质就是</span><br><span class="line">  回调函数</span><br></pre></td></tr></table></figure></li></ul><blockquote><p>dome源码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;canvas &#123; width: 100%; height: 100% &#125;&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src=<span class="string">"../three.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!--https://github.com/mrdoob/three.js--&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var scene = new THREE.Scene(); //  创建一个3D场景</span><br><span class="line"></span><br><span class="line">    var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);  // 创建透视相机</span><br><span class="line"></span><br><span class="line">    var renderer = new THREE.WebGLRenderer();  // 创建渲染器</span><br><span class="line">    renderer.setSize(window.innerWidth, window.innerHeight);  // 设置渲染器的大小为窗口的内宽度，也就是内容区的宽度</span><br><span class="line">    document.body.appendChild(renderer.domElement); // 挂在dom上</span><br><span class="line"></span><br><span class="line">    //  添加物体到场景中</span><br><span class="line">    var geometry = new THREE.CubeGeometry(1,1,2);  //  CubeGeometry(width, height, depth, segmentsWidth, segmentsHeight, segmentsDepth, materials, sides)</span><br><span class="line">    // width/height/depth分别代表立方体XYZ三轴的长度，剩下的比较复杂，之后深入学习</span><br><span class="line"></span><br><span class="line">    var material = new THREE.MeshBasicMaterial(&#123;color: 0xf65a41&#125;);</span><br><span class="line">    var cube = new THREE.Mesh(geometry, material);</span><br><span class="line">    scene.add(cube);</span><br><span class="line"></span><br><span class="line">    camera.position.z = 5;</span><br><span class="line">    //  实时渲染</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">render</span></span>() &#123;</span><br><span class="line">        requestAnimationFrame(render); // 回调render函数，做成实时渲染</span><br><span class="line">        cube.rotation.x += 0.1;</span><br><span class="line">        cube.rotation.y += 0.1;</span><br><span class="line">        renderer.render(scene, camera); // 渲染器的render函数接受参数 scene(场景)、camera(相机)</span><br><span class="line">    &#125;</span><br><span class="line">    render();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></blockquote></li></ul><h3 id="场景、相机、渲染器之间的关系"><a href="#场景、相机、渲染器之间的关系" class="headerlink" title="场景、相机、渲染器之间的关系"></a>场景、相机、渲染器之间的关系</h3><p>Three.js中的场景是一个物体的容器，开发者可以将需要的角色放入场景中，例如苹果，葡萄。同时，角色自身也管理着其在场景中的位置。</p><p>相机的作用就是面对场景，在场景中取一个合适的景，把它拍下来。</p><p>渲染器的作用就是将相机拍摄下来的图片，放到浏览器中去显示。他们三者的关系如下图所示：<br><img src="http://www.hewebgl.com/attached/image/20130810/20130810150021_257.jpg" alt="关系图"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.hewebgl.com/article/getarticle/27&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;webGL中文网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github
+      
+    
+    </summary>
+    
+    
+      <category term="webGL" scheme="http://yoursite.com/tags/webGL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>点、线、面</title>
+    <link href="http://yoursite.com/2018/04/18/three2/"/>
+    <id>http://yoursite.com/2018/04/18/three2/</id>
+    <published>2018-04-17T16:00:00.000Z</published>
+    <updated>2018-04-23T07:46:48.419Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="从点、线、面开始构建"><a href="#从点、线、面开始构建" class="headerlink" title="从点、线、面开始构建"></a>从点、线、面开始构建</h3><ul><li>创建一个点<br><code>var point = new THREE.Vector3(4,8,9)</code> //  分别代表在XYZ轴的坐标</li><li><p>创建透视相机, 多了些参数，继续往下看(学成归来再补)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000) //  创建透视相机</span><br><span class="line">        camera.position.x = 0;</span><br><span class="line">        camera.position.y = 1000;</span><br><span class="line">        camera.position.z = 0;   // 相机位置</span><br><span class="line">        camera.up.x = 0;</span><br><span class="line">        camera.up.y = 0;</span><br><span class="line">        camera.up.z = 1;</span><br><span class="line">        camera.lookAt(&#123;</span><br><span class="line">            x : 0,</span><br><span class="line">            y : 0,</span><br><span class="line">            z : 0</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure></li><li><p>声明一个可以存放点的几何体<br><code>var geometry = new THREE.Geometry()</code></p></li><li><p>声明一种线条材质<br><code>var material = new THREE.LineBasicMaterial({ vertexColors: THREE.VexterColors})</code> // 一种线条的材质，并且多了参数，代表材质颜色由线条顶点颜色决定 具体参数见下图</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LineBasicMaterial( parameters )</span><br><span class="line"></span><br><span class="line">         Parameters是一个定义材质外观的对象，它包含多个属性来定义材质，这些属性是：</span><br><span class="line"></span><br><span class="line">         Color：线条的颜色，用16进制来表示，默认的颜色是白色。</span><br><span class="line"></span><br><span class="line">         Linewidth：线条的宽度，默认时候1个单位宽度。</span><br><span class="line"></span><br><span class="line">         Linecap：线条两端的外观，默认是圆角端点，当线条较粗的时候才看得出效果，如果线条很细，那么你几乎看不出效果了。</span><br><span class="line"></span><br><span class="line">         Linejoin：两个线条的连接点处的外观，默认是“round”，表示圆角。</span><br><span class="line"></span><br><span class="line">         VertexColors：定义线条材质是否使用顶点颜色，这是一个boolean值。意思是，线条各部分的颜色会根据顶点的颜色来进行插值。（如果关于插值不是很明白，可以QQ问我，QQ在前言中你一定能够找到，嘿嘿，虽然没有明确写出）。</span><br><span class="line"></span><br><span class="line">         Fog：定义材质的颜色是否受全局雾效的影响。</span><br></pre></td></tr></table></figure></li><li><p>定义一个16进制颜色</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var color1 = new THREE.Color(0x444444), color2 = new THREE.Color(0xf65a41)</span><br></pre></td></tr></table></figure></li><li><p>线的材质由两点的颜色决定</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var p1 = new THREE.Vector3(-100,0,100)</span><br><span class="line">var p2 = new THREE.Vector3(100,0,-100)</span><br><span class="line">geometry.vertices.push(p1)</span><br><span class="line">geometry.vertices.push(p2)</span><br><span class="line">geometry.colors.push(color1, color2)</span><br><span class="line">line =  new THREE.Line(geometry, material, THREE.LinePieces)</span><br><span class="line">scene.add(line)</span><br></pre></td></tr></table></figure></li></ul><p>————画——-线——-完——-成———————————</p><h3 id="棋盘-源码见下"><a href="#棋盘-源码见下" class="headerlink" title="棋盘 源码见下"></a>棋盘 源码见下</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span></span><br><span class="line">          content=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>&gt;</span><br><span class="line">    &lt;title&gt;网格&lt;/title&gt;</span><br><span class="line">    &lt;script src=<span class="string">"../three.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="comment">#canvas&#123;</span></span><br><span class="line">        width:100%;</span><br><span class="line">        height: 600px;</span><br><span class="line">        background-color: <span class="comment">#333;</span></span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=<span class="string">"canvas"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var width = document.getElementById(<span class="string">'canvas'</span>).offsetWidth</span><br><span class="line">    var height = document.getElementById(<span class="string">'canvas'</span>).offsetHeight</span><br><span class="line">    //  创建场景</span><br><span class="line">    var scene = new THREE.Scene()</span><br><span class="line">    //  创建相机</span><br><span class="line">    var camera</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">initCamera</span></span>() &#123;</span><br><span class="line">        camera = new THREE.PerspectiveCamera(45, width/height,1 ,10000)</span><br><span class="line">        camera.position.x = 0;</span><br><span class="line">        camera.position.y = 1000;</span><br><span class="line">        camera.position.z = 0;</span><br><span class="line">        camera.up.x = 0;</span><br><span class="line">        camera.up.y = 0;</span><br><span class="line">        camera.up.z = 1;</span><br><span class="line">        camera.lookAt(&#123;</span><br><span class="line">            x: 0,</span><br><span class="line">            y: 0,</span><br><span class="line">            z: 0</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    //  设置光源</span><br><span class="line">    var light</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">initLight</span></span>() &#123;</span><br><span class="line">        light = new THREE.DirectionalLight(0x0366d6, 1.0, 0)</span><br><span class="line">        light.position.set(100,100,200)</span><br><span class="line">        scene.add(light)</span><br><span class="line">    &#125;</span><br><span class="line">    //  渲染器</span><br><span class="line">    var renderer</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">initRenderer</span></span>()&#123;</span><br><span class="line">        renderer = new THREE.WebGLRenderer(&#123;</span><br><span class="line">            antialias: <span class="literal">true</span></span><br><span class="line">        &#125;)</span><br><span class="line">        renderer.setSize(width,height)</span><br><span class="line">        document.getElementById(<span class="string">'canvas'</span>).appendChild(renderer.domElement)</span><br><span class="line">        renderer.setClearColor(0xFFFFFF, 1.0)</span><br><span class="line">    &#125;</span><br><span class="line">    //   划线</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">initObject</span></span>() &#123;</span><br><span class="line">        var geometry = new THREE.Geometry()  //  创建几何体来存放点</span><br><span class="line">        geometry.vertices.push(new THREE.Vector3(-500,0,0))</span><br><span class="line">        geometry.vertices.push(new THREE.Vector3(500,0,0))</span><br><span class="line">        var material = new THREE.LineBasicMaterial(&#123;color: 0xf65a41&#125;) // 画线</span><br><span class="line">        <span class="keyword">for</span>(var i=0; i&lt;=20; i++) &#123;</span><br><span class="line">            var line = new THREE.Line(geometry, material)</span><br><span class="line">            line.position.z = i*50 - 500</span><br><span class="line">            scene.add(line)</span><br><span class="line">            var line = new THREE.Line(geometry, material)</span><br><span class="line">            line.position.x = i*50 - 500</span><br><span class="line">            line.rotation.y = Math.PI/180 * 90</span><br><span class="line">            scene.add(line)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">startThree</span></span>() &#123;</span><br><span class="line">        initCamera()</span><br><span class="line">        initLight()</span><br><span class="line">        initRenderer()</span><br><span class="line">        initObject()</span><br><span class="line">        renderer.clear()</span><br><span class="line">        renderer.render(scene, camera)</span><br><span class="line">    &#125;</span><br><span class="line">    startThree()</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;从点、线、面开始构建&quot;&gt;&lt;a href=&quot;#从点、线、面开始构建&quot; class=&quot;headerlink&quot; title=&quot;从点、线、面开始构建&quot;&gt;&lt;/a&gt;从点、线、面开始构建&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;创建一个点&lt;br&gt;&lt;code&gt;var point = new T
+      
+    
+    </summary>
+    
+    
+      <category term="webGL" scheme="http://yoursite.com/tags/webGL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android中遇到的坑</title>
+    <link href="http://yoursite.com/2018/01/12/android/"/>
+    <id>http://yoursite.com/2018/01/12/android/</id>
+    <published>2018-01-12T08:56:37.000Z</published>
+    <updated>2018-04-23T07:46:48.329Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>使用vue-cli做单页面应用，在uc浏览器，微信浏览器，oppo等手机出现白屏</p></blockquote><ul><li>不支持es6语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">babel-loader转换es5语法,但是static文件属于静态文件，不转换</span><br><span class="line">static文件夹中的js文件不能出现es6文件</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;使用vue-cli做单页面应用，在uc浏览器，微信浏览器，oppo等手机出现白屏&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;不支持es6语法&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+      
+    
+    </summary>
+    
+    
+      <category term="android" scheme="http://yoursite.com/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>es6</title>
+    <link href="http://yoursite.com/2018/01/12/es6/"/>
+    <id>http://yoursite.com/2018/01/12/es6/</id>
+    <published>2018-01-12T08:56:37.000Z</published>
+    <updated>2018-04-23T07:46:48.346Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="let-const"><a href="#let-const" class="headerlink" title="let/const"></a>let/const</h3><ul><li>let和var的区别：let声明的变量只有所在的代码块有效</li><li>let没有变量的提升，只能先声明后使用</li><li>const–常量，只可声明，不能改变  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const user=&#123;&#125;;</span><br><span class="line">user.name = <span class="string">'zhangsan'</span></span><br><span class="line">console.log(user.name)</span><br><span class="line">// <span class="string">"zhangsan"</span></span><br><span class="line">//常量user储存的是一个地址，这个地址指向一个对象。</span><br><span class="line">//不可变的只是这个地址，即不能把user指向另一个地址，但对象本身的属性是可变的</span><br></pre></td></tr></table></figure></li></ul><h3 id="变量的声明方法"><a href="#变量的声明方法" class="headerlink" title="变量的声明方法"></a>变量的声明方法</h3><p>es5: <code>var</code> <code>function</code><br>es6: <code>var</code> <code>function</code> <code>let</code> <code>const</code> <code>import</code> <code>class</code></p><h3 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h3><ul><li>es5只有全局作用域和函数作用域没有块及作用域</li><li>let实际是新增块及作用域<h3 id="set-map"><a href="#set-map" class="headerlink" title="set/map"></a>set/map</h3></li></ul><h3 id="函数的Rest参数和扩展"><a href="#函数的Rest参数和扩展" class="headerlink" title="函数的Rest参数和扩展"></a>函数的Rest参数和扩展</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> sum(...m)&#123;</span><br><span class="line"><span class="built_in">let</span> total = 0;</span><br><span class="line"><span class="keyword">for</span>(var i of m)&#123;</span><br><span class="line">total += i;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">sum(1,3,5,7)</span><br><span class="line"><span class="built_in">let</span> arr1 = [1,2,3]</span><br><span class="line"><span class="built_in">let</span> arr2 = [4,5,6]</span><br><span class="line">arr1.contact(arr2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> [a, b, c] = <span class="string">'123'</span></span><br><span class="line"><span class="built_in">let</span> arr = [a,b,c]</span><br><span class="line">console.log(arr)</span><br><span class="line">[<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>]</span><br></pre></td></tr></table></figure><h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> checks = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"><span class="built_in">return</span> new Promise(<span class="keyword">function</span>(resolve,reject)&#123;</span><br><span class="line">var a = Math.floor(Math.random()*2)</span><br><span class="line"><span class="keyword">if</span>(a)&#123;</span><br><span class="line">resolve(<span class="string">'success'</span>)</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">reject(<span class="string">'error'</span>)</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">checks().<span class="keyword">then</span>(res=&gt;console.log(res))</span><br><span class="line">.catch(err=&gt;console.log(err))</span><br></pre></td></tr></table></figure><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><ul><li>当返回值有且只有一个时不用写return<br><code>console.log((a)=&gt;console.log(a))</code></li><li>有多步时需要加{}<br><code>console.log((a)=&gt;{console.log(a)})</code></li><li>this的绑定<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">箭头函数中，this指向的固定化，并不是因为箭头函数内部有绑定this的</span><br><span class="line"></span><br><span class="line">机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外</span><br><span class="line"></span><br><span class="line">层代码块的this。正是因为它没有this，所以也就不能用作构造函数。</span><br></pre></td></tr></table></figure></li></ul><h3 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> a = <span class="string">'红红'</span></span><br><span class="line">console.log(`<span class="variable">$&#123;a&#125;</span>最帅`)</span><br><span class="line"></span><br><span class="line">* <span class="string">'红红最帅'</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;let-const&quot;&gt;&lt;a href=&quot;#let-const&quot; class=&quot;headerlink&quot; title=&quot;let/const&quot;&gt;&lt;/a&gt;let/const&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;let和var的区别：let声明的变量只有所在的代码块有效&lt;/li&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="javascripts" scheme="http://yoursite.com/tags/javascripts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>es7/es8常用方法</title>
+    <link href="http://yoursite.com/2018/01/12/es7-8/"/>
+    <id>http://yoursite.com/2018/01/12/es7-8/</id>
+    <published>2018-01-12T08:56:37.000Z</published>
+    <updated>2018-04-23T07:46:48.348Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="es7"><a href="#es7" class="headerlink" title="es7"></a>es7</h2><h3 id="Array-prototype-includes"><a href="#Array-prototype-includes" class="headerlink" title="Array.prototype.includes()"></a><code>Array.prototype.includes()</code></h3><blockquote><p>判断数组中是否存在</p></blockquote><h3 id="求幂运算符（-）"><a href="#求幂运算符（-）" class="headerlink" title="求幂运算符（**）"></a><code>求幂运算符（**）</code></h3><p>基本用法<br><code>3 ** 2           // 9</code><br>效果同：<br><code>Math.pow(3, 2)   // 9</code></p><p>对比下其他语言的指数运算符：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Python: x ** y</span><br><span class="line">CoffeeScript: x ** y</span><br><span class="line">F<span class="comment">#: x ** y</span></span><br><span class="line">Ruby: x ** y</span><br><span class="line">Perl: x ** y</span><br><span class="line">Lua, Basic, MATLAB: x ^ y</span><br></pre></td></tr></table></figure></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>].includes(<span class="string">'a'</span>)</span><br><span class="line">// <span class="literal">true</span></span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>].includes(<span class="string">'d'</span>)</span><br><span class="line">// <span class="literal">false</span></span><br></pre></td></tr></table></figure><h2 id="es8"><a href="#es8" class="headerlink" title="es8"></a>es8</h2><h3 id="Object-values-Object-entries"><a href="#Object-values-Object-entries" class="headerlink" title="Object.values/Object.entries"></a><code>Object.values/Object.entries</code></h3><blockquote><p>遍历对象</p></blockquote><ul><li><p>在ES8 /ES2017之前，Javascript开发者需要迭代一个对象的自身属性时候不得不用Object.keys，通过迭代且使用obj[key]获取value值返回一个数组</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> obj = &#123;a: 1, b: 2, c: 3&#125;</span><br><span class="line">Object.keys(obj).forEach((key, index)=&gt;&#123;</span><br><span class="line">  console.log(key, obj[key])</span><br><span class="line">&#125;)</span><br><span class="line">// a, 1  b, 2   c, 3</span><br></pre></td></tr></table></figure></li><li><p>而使用ES6/ES2015 中for/of稍微好点：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> obj = &#123;a: 1, b: 2, c: 3&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">let</span> key of Object.keys(obj)) &#123;</span><br><span class="line">  console.log(key, obj[key])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>Object.values返回对象自身可以迭代属性值（values）为数组类型。我们最好使用Array.prototype.forEach迭代它，结合ES6的箭头函数隐形返回值：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> obj = &#123;a: 1, b: 2, c: 3&#125;</span><br><span class="line">Object.values(obj).forEach(value=&gt;console.log(value))</span><br><span class="line">// 1, 2, 3</span><br></pre></td></tr></table></figure></li><li><p>·Object.entries·，在另一方面，将会返回对象自身可迭代属性key-value对数组（作为一个数组），他们（key-value）分别以数组存放数组中。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> obj = &#123;a: 1, b: 2, c: 3&#125;</span><br><span class="line">JSON.stringify(Object.entries(obj))</span><br><span class="line">// <span class="string">"[["</span>a<span class="string">",1],["</span>b<span class="string">",2],["</span>c<span class="string">",3]]"</span></span><br></pre></td></tr></table></figure></li><li><p>我们可以使用ES6/ES2015解构,从这嵌套数组中分别声明key和value</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> obj = &#123;a: 1, b: 2, c: 3&#125;</span><br><span class="line">Object.entries(obj).forEach(([key, value]) =&gt; &#123;</span><br><span class="line"> console.log(`<span class="variable">$&#123;key&#125;</span> is <span class="variable">$&#123;value&#125;</span>`)</span><br><span class="line">&#125;)</span><br><span class="line">// a is 1, b is 2, c is 3</span><br></pre></td></tr></table></figure></li></ul><h3 id="padStart-padEnd"><a href="#padStart-padEnd" class="headerlink" title="padStart/padEnd"></a>padStart/padEnd</h3><blockquote><p>字符串的前后填充</p></blockquote><ul><li><p>String.prototype.padStart 和 String.prototype.padEnd在javascript字符操作是一个不错的体验，帮助避免依赖而外的库。<br>他有两个参数，第一个代表字符串长度</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="string">'vue'</span>.padStart(10).length)</span><br><span class="line">//   10</span><br><span class="line">console.log(<span class="string">'react'</span>.padStart(20).length)</span><br><span class="line">//   10</span><br></pre></td></tr></table></figure></li><li><p>第二个参数，代表填充内容</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="string">'vue'</span>.padStart(10, <span class="string">'is'</span>))</span><br><span class="line">// isisisivue</span><br><span class="line">console.log(<span class="string">'react'</span>.padStart(15, <span class="string">'this is'</span>))</span><br><span class="line">//   this isthireact</span><br></pre></td></tr></table></figure></li><li><p>padEnd 从字符串后面填充</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="string">'vue'</span>.padEnd(10, <span class="string">':-)'</span>))</span><br><span class="line">// <span class="string">"vue:-):-):"</span></span><br><span class="line">console.log(<span class="string">'react'</span>.padEnd(10, <span class="string">'*'</span>))</span><br><span class="line">// <span class="string">"react*****"</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;es7&quot;&gt;&lt;a href=&quot;#es7&quot; class=&quot;headerlink&quot; title=&quot;es7&quot;&gt;&lt;/a&gt;es7&lt;/h2&gt;&lt;h3 id=&quot;Array-prototype-includes&quot;&gt;&lt;a href=&quot;#Array-prototype-includes&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="javascripts" scheme="http://yoursite.com/tags/javascripts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node-source</title>
+    <link href="http://yoursite.com/2018/01/12/node-source/"/>
+    <id>http://yoursite.com/2018/01/12/node-source/</id>
+    <published>2018-01-12T08:56:37.000Z</published>
+    <updated>2018-04-23T07:46:48.398Z</updated>
+    
+    <content type="html"><![CDATA[<p>Node各种资源</p><h2 id="english-api"><a href="#english-api" class="headerlink" title="english  api"></a>english  api</h2><p><a href="https://nodejs.org/api/" target="_blank" rel="noopener">https://nodejs.org/api/</a></p><h2 id="china-api"><a href="#china-api" class="headerlink" title="china api"></a>china api</h2><p><a href="http://nodejs.cn/api/" target="_blank" rel="noopener">http://nodejs.cn/api/</a></p><h2 id="koa-web开发框架"><a href="#koa-web开发框架" class="headerlink" title="koa  web开发框架"></a>koa  web开发框架</h2><p><a href="http://koa.bootcss.com/" target="_blank" rel="noopener">http://koa.bootcss.com/</a></p><h2 id="A-better-and-open-source-search-for-node-packages"><a href="#A-better-and-open-source-search-for-node-packages" class="headerlink" title="A better and open source search for node packages"></a>A better and open source search for node packages</h2><p><a href="https://npms.io/" target="_blank" rel="noopener">https://npms.io/</a></p><h2 id="阮一峰Nodejs"><a href="#阮一峰Nodejs" class="headerlink" title="阮一峰Nodejs"></a>阮一峰Nodejs</h2><p><a href="http://javascript.ruanyifeng.com/nodejs/assert.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/nodejs/assert.html</a></p><h2 id="express"><a href="#express" class="headerlink" title="express"></a>express</h2><p><a href="http://expressjs.com" target="_blank" rel="noopener">http://expressjs.com</a></p><h2 id="express-api"><a href="#express-api" class="headerlink" title="express api"></a>express api</h2><p><a href="http://expressjs.com/zh-cn/4x/api.html" target="_blank" rel="noopener">http://expressjs.com/zh-cn/4x/api.html</a></p><h2 id="Nodejs-资源大全中文版"><a href="#Nodejs-资源大全中文版" class="headerlink" title="Nodejs 资源大全中文版"></a>Nodejs 资源大全中文版</h2><p><a href="https://github.com/Pines-Cheng/awesome-nodejs-cn" target="_blank" rel="noopener">https://github.com/Pines-Cheng/awesome-nodejs-cn</a></p><p>#3    thinkjs文档<br><a href="https://thinkjs.org/zh-cn/doc/index.html" target="_blank" rel="noopener">https://thinkjs.org/zh-cn/doc/index.html</a></p><p><a href="https://www.awesomes.cn/repos/NodeJS/Frameworks" target="_blank" rel="noopener">https://www.awesomes.cn/repos/NodeJS/Frameworks</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Node各种资源&lt;/p&gt;
+&lt;h2 id=&quot;english-api&quot;&gt;&lt;a href=&quot;#english-api&quot; class=&quot;headerlink&quot; title=&quot;english  api&quot;&gt;&lt;/a&gt;english  api&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https:/
+      
+    
+    </summary>
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css Hack</title>
+    <link href="http://yoursite.com/2018/01/12/hack/"/>
+    <id>http://yoursite.com/2018/01/12/hack/</id>
+    <published>2018-01-12T08:56:37.000Z</published>
+    <updated>2018-04-23T07:46:48.357Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/xustart7720/article/details/73604651" target="_blank" rel="noopener">常见的web浏览器兼容解决</a><br><a href="https://zhidao.baidu.com/question/583799354335504245.html" target="_blank" rel="noopener">解决ie7,ie8</a><br><a href="https://blog.csdn.net/yinkaihui/article/details/51142494" target="_blank" rel="noopener">有关css和js针对不同浏览器兼容的问题</a><br><a href="http://blog.csdn.net/freshlover/article/details/12132801" target="_blank" rel="noopener">CSDN freshlover的博客专栏</a></p><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><blockquote><p> 由于不同的浏览器对css的支持和解析结果不一样，以及css优先级对浏览器解析结果的影响，所以要根据不同的浏览器应用场景来应用不同的css属性</p></blockquote><h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><blockquote><p> 优雅降级，渐进增强</p></blockquote><h4 id="方法一-条件注释法"><a href="#方法一-条件注释法" class="headerlink" title="方法一  条件注释法"></a>方法一  条件注释法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">只在IE下生效</span><br><span class="line">&lt;!--[<span class="keyword">if</span> IE]&gt;</span><br><span class="line">这段文字只在IE浏览器显示</span><br><span class="line">&lt;![endif]--&gt;</span><br><span class="line"></span><br><span class="line">只在IE6下生效</span><br><span class="line">&lt;!--[<span class="keyword">if</span> IE 6]&gt;</span><br><span class="line">这段文字只在IE6浏览器显示</span><br><span class="line">&lt;![endif]--&gt;</span><br><span class="line"></span><br><span class="line">只在IE6以上版本生效</span><br><span class="line">&lt;!--[<span class="keyword">if</span> gte IE 6]&gt;</span><br><span class="line">这段文字只在IE6以上(包括)版本IE浏览器显示</span><br><span class="line">&lt;![endif]--&gt;</span><br><span class="line"></span><br><span class="line">只在IE8上不生效</span><br><span class="line">&lt;!--[<span class="keyword">if</span> ! IE 8]&gt;</span><br><span class="line">这段文字在非IE8浏览器显示</span><br><span class="line">&lt;![endif]--&gt;</span><br><span class="line"></span><br><span class="line">非IE浏览器生效</span><br><span class="line">&lt;!--[<span class="keyword">if</span> !IE]&gt;</span><br><span class="line">这段文字只在非IE浏览器显示</span><br><span class="line">&lt;![endif]--&gt;</span><br></pre></td></tr></table></figure><h4 id="方法二-类内属性前缀法"><a href="#方法二-类内属性前缀法" class="headerlink" title="方法二   类内属性前缀法"></a>方法二   类内属性前缀法</h4><ul><li>“-″减号是IE6专有的hack</li><li>“\9″ IE6/IE7/IE8/IE9/IE10都生效</li><li>“\0″ IE8/IE9/IE10都生效，是IE8/9/10的hack</li><li>“\9\0″ 只对IE9/IE10生效，是IE9/10的hack</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ * ie(6~10)(Q)(兼容模式)  ie(6~7)(S)</span><br><span class="line">$ + ie(6~10)(Q)  ie(6~7)(S)</span><br><span class="line">$ - ie6(Q\S)专属</span><br><span class="line">$ _ ie(6~9)(Q)   ie6(S)</span><br><span class="line">$ <span class="comment"># ie(6~10)(Q)  ie(6~7)(S) </span></span><br><span class="line"></span><br><span class="line">$</span><br><span class="line">$</span><br><span class="line">$ !important ie10(Q)  ie(7~10)(S)</span><br></pre></td></tr></table></figure><h4 id="方法三-选择器前缀法"><a href="#方法三-选择器前缀法" class="headerlink" title="方法三  选择器前缀法"></a>方法三  选择器前缀法</h4><p>给选择器加hack前缀</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/xustart7720/article/details/73604651&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;常见的web浏览器兼容解决&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https:/
+      
+    
+    </summary>
+    
+    
+      <category term="兼容" scheme="http://yoursite.com/tags/%E5%85%BC%E5%AE%B9/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+</feed>

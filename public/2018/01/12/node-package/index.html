@@ -1,0 +1,1014 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="孙继红">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>node-package | 孙继红</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="孙继红" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="https://github.com/sun142725"><i class="fa fa-fw "></i>git</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/about"><i class="fa fa-fw "></i>mine</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="node-package">
+            
+	            node-package
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/node">
+               node
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/01/12</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="Awesome-Node-js-中文版"><a href="#Awesome-Node-js-中文版" class="headerlink" title="Awesome Node.js 中文版"></a>Awesome Node.js 中文版</h1><blockquote>
+<p>一份nodejs的超级大礼包 <a href="#包">包(packages)</a> and <a href="#资源">资源(resources)</a>。</p>
+</blockquote>
+<p>被老外的<a href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener">awesome</a> 清单刺激到，觉得有必要翻译一份，为国产的程序员们做点事情，本清单将保持实时更新同步。PS:进都进来了，就顺便看看其他的吧:</p>
+<ul>
+<li><a href="https://github.com/Pines-Cheng/awesome-gulp-cn" target="_blank" rel="noopener">awesome-gulp-cn</a></li>
+<li><a href="https://github.com/Pines-Cheng/awesome-angularjs-cn" target="_blank" rel="noopener">awesome-angularjs-cn</a></li>
+<li><a href="https://github.com/Pines-Cheng/awesome-react-cn" target="_blank" rel="noopener">awesome-react-cn</a></li>
+<li><a href="https://github.com/Pines-Cheng/awesome-react-native-cn" target="_blank" rel="noopener">awesome-react-native-cn</a></li>
+<li><a href="https://github.com/Pines-Cheng/awesome-npm-cn" target="_blank" rel="noopener">awesome-npm-cn</a></li>
+</ul>
+<p>如果想加入，那就加入吧。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#包">包(Packages)</a><ul>
+<li><a href="#神奇的科学mad-science">神奇的科学(mad science)</a></li>
+<li><a href="#命令行应用">命令行应用</a></li>
+<li><a href="#实用的程序">实用的程序</a></li>
+<li><a href="#http">HTTP</a></li>
+<li><a href="#调试--数据">调试/数据</a></li>
+<li><a href="#日志">日志</a></li>
+<li><a href="#命令行工具">命令行工具</a></li>
+<li><a href="#构建工具">构建工具</a></li>
+<li><a href="#硬件">硬件</a></li>
+<li><a href="#模板">模板</a></li>
+<li><a href="#web框架">Web框架</a></li>
+<li><a href="#文档">文档</a></li>
+<li><a href="#文件系统">文件系统</a></li>
+<li><a href="#流控制">流控制</a></li>
+<li><a href="#流">流</a></li>
+<li><a href="#实时">实时</a></li>
+<li><a href="#图片">图片</a></li>
+<li><a href="#文本">文本</a></li>
+<li><a href="#数字">数字</a></li>
+<li><a href="#数学">数学</a></li>
+<li><a href="#日期">日期</a></li>
+<li><a href="#url">URL</a></li>
+<li><a href="#数据校验">数据校验</a></li>
+<li><a href="#解析">解析</a></li>
+<li><a href="#人性">人性</a></li>
+<li><a href="#压缩">压缩</a></li>
+<li><a href="#网络">网络</a></li>
+<li><a href="#数据库">数据库</a></li>
+<li><a href="#测试">测试</a></li>
+<li><a href="#基准化分析">基准化分析</a></li>
+<li><a href="#缩小">缩小</a></li>
+<li><a href="#验证">验证</a></li>
+<li><a href="#email">Email</a></li>
+<li><a href="#工作队列">工作队列</a></li>
+<li><a href="#nodejs管理">Node.js管理</a></li>
+<li><a href="#兼容">兼容</a></li>
+<li><a href="#自然语言处理">自然语言处理</a></li>
+<li><a href="#进程管理">进程管理</a></li>
+<li><a href="#自动化">自动化</a></li>
+<li><a href="#ast">AST</a></li>
+<li><a href="#静态站点生成器">静态站点生成器</a></li>
+<li><a href="#CMS">CMS</a></li>
+<li><a href="#论坛">论坛</a></li>
+<li><a href="#博客">博客</a></li>
+<li><a href="#奇奇怪怪的东东">奇奇怪怪的东东</a></li>
+<li><a href="#其他">其他</a></li>
+</ul>
+</li>
+<li><a href="#资源">资源</a><ul>
+<li><a href="#tutorials">入门</a></li>
+<li><a href="#discovery">发现</a></li>
+<li><a href="#articles">文章</a></li>
+<li><a href="#新闻">新闻</a></li>
+<li><a href="#视频">视频</a></li>
+<li><a href="#直播">直播</a></li>
+<li><a href="#书籍">书籍</a></li>
+<li><a href="#博客">博客</a></li>
+<li><a href="#课程">课程</a></li>
+<li><a href="#夹带">夹带</a></li>
+<li><a href="#工具">工具</a></li>
+<li><a href="#社区">社区</a></li>
+<li><a href="#其他">其他</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><h3 id="神奇的科学"><a href="#神奇的科学" class="headerlink" title="神奇的科学"></a>神奇的科学</h3><ul>
+<li><a href="https://github.com/feross/webtorrent" target="_blank" rel="noopener">webtorrent</a> - WebTorrent 是一个可工作在node.js和浏览器的流BT客户端。它完全采用JavaScript开发，在浏览器中WebTorrent使用WebRTC (data channels) 来进行p2p传输。它可以不使用浏览器插件，扩展或安装。只有JavaScript。</li>
+<li><a href="https://github.com/cjb/GitTorrent" target="_blank" rel="noopener">GitTorrent</a> - Git仓库的P2P网络，通过比特流分享。</li>
+<li><a href="https://github.com/mafintosh/peerflix" target="_blank" rel="noopener">peerflix</a> - 流客户端.</li>
+<li><a href="http://dat-data.com" target="_blank" rel="noopener">dat</a> - Dat 是开源的项目，进行实时复制，数据集版本控制，提供每个文件格式和数据存储后端的流。.</li>
+<li><a href="https://github.com/ipfs/js-ipfs" target="_blank" rel="noopener">ipfs</a> - IPFS 是分布式文件系统，寻求连接所有计算机设备的相同文件系统。在某些方面，这很类似于原始的 Web 目标，但是 IPFS 最终会更像单个比特流群交换的 git 对象。</li>
+<li><a href="http://stack.gl" target="_blank" rel="noopener">stackgl</a> - WebGL的开源软件生态系统，基于browserify和npm构建。</li>
+<li><a href="https://github.com/mafintosh/peerwiki" target="_blank" rel="noopener">peerwiki</a> - 比特流上的所有wiki</li>
+<li><a href="https://github.com/mafintosh/peercast" target="_blank" rel="noopener">peercast</a> - 推送视频流到Chromecast.</li>
+<li><a href="http://bitcoinjs.org" target="_blank" rel="noopener">BitcoinJS</a> - BitcoinJS 是一个纯 JavaScript 库，支持 Node.js和浏览器，用于操作各种比特币钱包。代码清晰，可读性强。</li>
+<li><a href="https://bitcore.io/" target="_blank" rel="noopener">Bitcore</a> - Bitcore 是一个完整原生的比特币网络的 JavaScript 开发库，提供比特币应用开发的核心功能。</li>
+<li><a href="http://pdfkit.org" target="_blank" rel="noopener">PDFKit</a> - PDF生成器库.</li>
+<li><a href="https://github.com/Turfjs/turf" target="_blank" rel="noopener">turf</a> - Turf 是一个 JavaScript 的模块化的 GIS 引擎，它执行地理空间与GeoJSON数据处理任务,可以在服务器或在浏览器上运行。</li>
+<li><a href="https://github.com/mafintosh/webcat" target="_blank" rel="noopener">webcat</a> - 使用您的GitHub的私有/公共密钥认证的p2p管道，可以通过WebRTC跨web使用。</li>
+<li><a href="https://github.com/creationix/js-git" target="_blank" rel="noopener">js-git</a> - Git的JavaScript实现。</li>
+<li><a href="http://node-os.com" target="_blank" rel="noopener">NodeOS</a> - 第一个通过npm实现的操作系统，使用Node.js编写。</li>
+<li><a href="https://github.com/erelsgl/limdu" target="_blank" rel="noopener">limdu</a> - 一个机器学习框架。</li>
+<li><a href="http://js.cytoscape.org" target="_blank" rel="noopener">Cytoscape.js</a> - Cytoscape.js 是个开源 JavaScript 图形库，用户可以用 Cytoscape.js 来分析和制作可视化图形。它兼容 CommonJS/Node.js, jQuery 1.4+ 和纯 JavaScript。</li>
+</ul>
+<h3 id="命令行应用"><a href="#命令行应用" class="headerlink" title="命令行应用"></a>命令行应用</h3><ul>
+<li><a href="https://github.com/sindresorhus/pageres" target="_blank" rel="noopener">pageres</a> - 网站截图工具。</li>
+<li><a href="https://github.com/sindresorhus/trash" target="_blank" rel="noopener">trash</a> - trash 命令替代linux rm命令实现windows回收站的功能</li>
+<li><a href="https://github.com/sindresorhus/npm-name" target="_blank" rel="noopener">npm-name</a> - 检查报名在npm上是否可用。</li>
+<li><a href="https://github.com/sindresorhus/xo" target="_blank" rel="noopener">XO</a> - XO 是 JavaScript 幸福样式，强制执行严格代码风格，pull request 的时候不会再讨论代码风格。没有 .eslintrc，.jshintrc，.jscsrc 管理。</li>
+<li><a href="https://github.com/sindresorhus/speed-test" target="_blank" rel="noopener">speed-test</a> - 测试网络连接速度和ping。</li>
+<li><a href="https://github.com/sindresorhus/np" target="_blank" rel="noopener">np</a> - 比<code>npm publish</code>更好用。</li>
+<li><a href="https://github.com/yeoman/yo" target="_blank" rel="noopener">yo</a> - 运行Yeoman生成器。</li>
+<li><a href="https://babeljs.io/docs/usage/cli/" target="_blank" rel="noopener">Babel</a> - 从现在开始使用下一代JavaScript。</li>
+<li><a href="http://eslint.org" target="_blank" rel="noopener">ESLint</a> - ESLint 是一个开源的插件化得JavaScript验证工具，相比JSLint，ESLint具有可配置性。</li>
+<li><a href="https://github.com/jscs-dev/node-jscs" target="_blank" rel="noopener">JSCS</a> - JavaScript代码风格检查。</li>
+<li><a href="https://github.com/feross/standard" target="_blank" rel="noopener">Standard</a> - JavaScript标准风格，使用一种风格来限制所有。</li>
+<li><a href="https://github.com/sindresorhus/cpy" target="_blank" rel="noopener">cpy</a> - 复制文件。</li>
+<li><a href="https://github.com/sindresorhus/fkill-cli" target="_blank" rel="noopener">fkill</a> - 跨平台的，更好的杀死进程的方式。</li>
+<li><a href="https://github.com/dthree/vantage" target="_blank" rel="noopener">vantage</a> - Vangtage.js 是一个全新的 Node 交互式 CLI。Vangtage 灵感来源于 commander.js，通过 inquirer.js 的交互式 prompt 把在线 Node 应用转换到 CLI。可以本地或者远程访问，Vantage 可以让你构建自己的 API，导入社区扩展等等。</li>
+<li><a href="https://github.com/MrRio/vtop" target="_blank" rel="noopener">vtop</a> - 更好更漂亮的图表。</li>
+<li><a href="https://github.com/sindresorhus/tmpin" target="_blank" rel="noopener">tmpin</a> - 给所有能接受文件输入的CLI应用添加标准输入支持。</li>
+<li><a href="https://github.com/sindresorhus/empty-trash" target="_blank" rel="noopener">empty-trash</a> - 清空回收站。</li>
+<li><a href="https://github.com/sindresorhus/is-up" target="_blank" rel="noopener">is-up</a> - 检查Web站点是否在线。</li>
+<li><a href="https://github.com/sindresorhus/is-online" target="_blank" rel="noopener">is-online</a> - 检查是否联网。</li>
+<li><a href="https://github.com/sindresorhus/public-ip" target="_blank" rel="noopener">public-ip</a> - 获取你的公网IP。</li>
+<li><a href="https://github.com/sindresorhus/dark-mode" target="_blank" rel="noopener">dark-mode</a> - 触发OS X的夜间模式。</li>
+<li><a href="https://github.com/chjj/ttystudio" target="_blank" rel="noopener">ttystudio</a> - 记录你的终端并且编译成GIF或者APNG动态图，无需任何依赖，bash脚本或者gif相关的东西。</li>
+<li><a href="https://github.com/alanshaw/david" target="_blank" rel="noopener">David</a> - 当你的npm依赖过时的时候通知你。</li>
+<li><a href="https://github.com/indexzero/http-server" target="_blank" rel="noopener">http-server</a> - 简单，零配置的命令行HTTP服务器。</li>
+<li><a href="https://github.com/tapio/live-server" target="_blank" rel="noopener">Live Server</a> - 一个自带热加载功能的http服务器。</li>
+<li><a href="https://github.com/kessler/node-bcat" target="_blank" rel="noopener">bcat</a> - 将命令行输出到web浏览器。</li>
+<li><a href="https://github.com/pawurb/normit" target="_blank" rel="noopener">normit</a> - 在终端运行的包含语音合成Google翻译。</li>
+<li><a href="https://github.com/slap-editor/slap" target="_blank" rel="noopener">slap</a> - 类似于Sublime的基于命令行的文本编辑器。</li>
+<li><a href="https://github.com/danielstjules/jsinspect" target="_blank" rel="noopener">jsinspect</a> - 发现复制粘贴的或者结构相似代码。</li>
+<li><a href="https://github.com/millermedeiros/esformatter" target="_blank" rel="noopener">esformatter</a> - JavaScript代码格式化。</li>
+<li><a href="https://github.com/danielstjules/pjs" target="_blank" rel="noopener">pjs</a> - 能作为管道使用的JavaScript，从终端快速过滤，映射等。</li>
+<li><a href="https://github.com/davglass/license-checker" target="_blank" rel="noopener">license-checker</a> - 检查应用的依赖的证书。</li>
+<li><a href="https://github.com/juliangruber/browser-run" target="_blank" rel="noopener">browser-run</a> - 轻松在浏览器环境中运行代码。</li>
+<li><a href="https://github.com/runvnc/modhelp" target="_blank" rel="noopener">modhelp</a> -在终端动态高亮README模块。</li>
+<li><a href="https://github.com/kevva/wifi-password" target="_blank" rel="noopener">wifi-password</a> - 在终端通过命令行获取当前的wifi密码。.</li>
+<li><a href="https://github.com/sindresorhus/wallpaper" target="_blank" rel="noopener">wallpaper</a> -命令行改变桌面的背景。</li>
+<li><a href="https://github.com/kevva/brightness-cli" target="_blank" rel="noopener">brightness</a> - 命令行改变屏幕的亮度。</li>
+<li><a href="https://github.com/maxogden/torrent" target="_blank" rel="noopener">torrent</a> - 下载种子。</li>
+<li><a href="https://github.com/jasnell/tfa" target="_blank" rel="noopener">tfa</a> - Two-factor验证客户端。</li>
+<li><a href="https://github.com/kilianc/rtail" target="_blank" rel="noopener">rtail</a> - 使用Unix管道，在终端实时输出浏览器多个流。</li>
+<li><a href="https://github.com/sindresorhus/kill-tabs" target="_blank" rel="noopener">kill-tabs</a> - 通过关闭Chrome 窗口来提升性能，减少电池消耗，节约内存。</li>
+<li><a href="https://github.com/wooorm/alex" target="_blank" rel="noopener">alex</a> - Catch insensitive, inconsiderate writing.</li>
+<li><a href="https://github.com/noraesae/pen" target="_blank" rel="noopener">pen</a> - 浏览器中的你最喜欢的编辑器Markdown实时预览。</li>
+<li><a href="https://github.com/beatfreaker/subdownloader" target="_blank" rel="noopener">subdownloader</a> - 电影和电视剧的字幕下载。</li>
+<li><a href="https://github.com/nogizhopaboroda/iponmap" target="_blank" rel="noopener">iponmap</a> - IP地址查找。</li>
+<li><a href="https://github.com/Javascipt/Jsome" target="_blank" rel="noopener">Jsome</a> - 根据配置的颜色和排版格式化打印JSON。</li>
+<li><a href="https://github.com/mischah/itunes-remote" target="_blank" rel="noopener">itunes-remote</a> -iTunes交互控制.</li>
+<li><a href="https://github.com/samverschueren/dev-time-cli" target="_blank" rel="noopener">dev-time</a> - 获取一个用户当前的本地时间.</li>
+<li><a href="https://github.com/beatfreaker/text-meme-cli" target="_blank" rel="noopener">text-meme</a> - 生成一个text meme.</li>
+<li><a href="https://github.com/samverschueren/mobicon-cli" target="_blank" rel="noopener">mobicon</a> - 生成手机应用的icon.</li>
+<li><a href="https://github.com/samverschueren/mobisplash-cli" target="_blank" rel="noopener">mobisplash</a> - 生成手机应用的 splash 屏幕.</li>
+<li><a href="https://github.com/rtfpessoa/diff2html-cli" target="_blank" rel="noopener">diff2html-cli</a> - 好看的 git diff 的html生成器.</li>
+<li><a href="https://github.com/dthree/cash" target="_blank" rel="noopener">Cash</a> - 纯js实现的跨平台的Unix shell命令.</li>
+<li><a href="https://github.com/sindresorhus/vaca" target="_blank" rel="noopener">vaca</a> - 获取一个随机的ASCII 🐮.</li>
+<li><a href="https://github.com/sindresorhus/gh-home" target="_blank" rel="noopener">gh-home</a> - 在当前的directory打开一个GitHub仓库的页面.</li>
+<li><a href="https://github.com/sindresorhus/npm-home" target="_blank" rel="noopener">npm-home</a> - 打开一个npm包的home页面.</li>
+</ul>
+<h3 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h3><ul>
+<li><a href="https://lodash.com/" target="_blank" rel="noopener">lodash</a> - 一个工具库，相当于一个更好更快的 Underscore.js.</li>
+<li><a href="https://github.com/facebook/immutable-js" target="_blank" rel="noopener">immutable</a> - 数据持久化.</li>
+<li><a href="http://swannodette.github.io/mori/" target="_blank" rel="noopener">mori</a> - A library for using使用 ClojureScript的持久化数据结构，且支持 vanilla JavaScript API的库.</li>
+<li><a href="http://ramdajs.com" target="_blank" rel="noopener">Ramda</a> - 专注于灵活的函数式编程的工具库，能力来自于自动柯里化和函数参数优先于数据，提供了mutating data.</li>
+<li><a href="http://folktalejs.org/" target="_blank" rel="noopener">Folktale</a> - 一整套通用的JavaScript函数式编程方案，帮助你构建优雅的，组合式的健壮且高度复用的应用。</li>
+<li><a href="http://documentcloud.github.io/underscore-contrib/" target="_blank" rel="noopener">underscore-contrib</a> - The brass buckles on Underscore’s utility belt.</li>
+<li><a href="http://moutjs.com" target="_blank" rel="noopener">Mout</a> - 和其他工具库最大的不同是，你可以选择只下载你需要的模块或函数，没有额外的负担。</li>
+<li><a href="http://reactivex.io" target="_blank" rel="noopener">RxJS</a> - 函数式响应式编程库，专注于大量不同数据的转换，构建和查询。</li>
+<li><a href="https://github.com/dtao/lazy.js" target="_blank" rel="noopener">Lazy.js</a> - Lazy.js是类似Underscore或Lo-Dash的JavaScript工具库，但是它有一个非常独特的特性：惰性求值。很多情况下，惰性求值都将带来巨大的性能提升，特别是当处理巨大的数组和连锁使用多个方法的时候。</li>
+</ul>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><ul>
+<li><a href="https://github.com/sindresorhus/got" target="_blank" rel="noopener">got</a> - A nicer interface to the built-in <code>http</code> module.</li>
+<li><a href="https://github.com/sindresorhus/gh-got" target="_blank" rel="noopener">gh-got</a> - Convenience wrapper for <code>got</code> to interact with the GitHub API.</li>
+<li><a href="https://github.com/request/request" target="_blank" rel="noopener">request</a> - Simplified HTTP request client.</li>
+<li><a href="https://github.com/pgte/nock" target="_blank" rel="noopener">Nock</a> - A HTTP mocking and expectations library.</li>
+<li><a href="https://github.com/substack/hyperquest" target="_blank" rel="noopener">hyperquest</a> - Streaming HTTP requests.</li>
+<li><a href="https://github.com/mzabriskie/axios" target="_blank" rel="noopener">axios</a> - Promise based HTTP client (works in the browser too).</li>
+<li><a href="https://github.com/indutny/node-spdy" target="_blank" rel="noopener">spdy</a> - Creates SPDY servers with the same API as the built-in <code>https</code> module.</li>
+<li><a href="https://github.com/hapijs/wreck" target="_blank" rel="noopener">wreck</a> - HTTP Client Utilities.</li>
+<li><a href="https://github.com/kevva/download" target="_blank" rel="noopener">download</a> - Download and extract files effortlessly.</li>
+<li><a href="https://github.com/nodejitsu/node-http-proxy" target="_blank" rel="noopener">http-proxy</a> - A full-featured HTTP proxy.</li>
+<li><a href="https://github.com/h2non/rocky" target="_blank" rel="noopener">rocky</a> - Featured, middleware-oriented HTTP proxy with traffic replay and intercept.</li>
+<li><a href="https://github.com/visionmedia/superagent" target="_blank" rel="noopener">superagent</a> - A small progressive HTTP request library.</li>
+</ul>
+<h3 id="Debugging-Profiling"><a href="#Debugging-Profiling" class="headerlink" title="Debugging / Profiling"></a>Debugging / Profiling</h3><ul>
+<li><a href="https://github.com/s-a/iron-node" target="_blank" rel="noopener">ironNode</a> - Node.js debugger supporting ES2015 out of the box.</li>
+<li><a href="https://github.com/node-inspector/node-inspector" target="_blank" rel="noopener">node-inspector</a> - Debugger based on Blink Developer Tools.</li>
+<li><a href="https://github.com/adobe-research/theseus" target="_blank" rel="noopener">Theseus</a> - A new type of JavaScript debugger featuring real-time code coverage, retroactive inspection and asynchronous call tree.</li>
+<li><a href="https://github.com/mattinsler/longjohn" target="_blank" rel="noopener">longjohn</a> - Long stack traces with configurable call trace length.</li>
+<li><a href="https://github.com/visionmedia/debug" target="_blank" rel="noopener">debug</a> - Tiny debugging utility.</li>
+<li><a href="https://github.com/jstrace/jstrace" target="_blank" rel="noopener">jstrace</a> - Dynamic tracing for JavaScript, similar to dtrace, ktap etc.</li>
+<li><a href="https://github.com/mafintosh/why-is-node-running" target="_blank" rel="noopener">why-is-node-running</a> - Node.js is running but you don’t know why?</li>
+<li><a href="https://github.com/valyouw/njstrace" target="_blank" rel="noopener">njsTrace</a> - Instrument and trace your code, see all function calls, arguments, return values, as well as the time spent in each function.</li>
+<li><a href="https://github.com/joyent/node-vstream" target="_blank" rel="noopener">vstream</a> - Instrumentable streams mix-ins to inspect a pipeline of streams.</li>
+<li><a href="https://github.com/watson/stackman" target="_blank" rel="noopener">stackman</a> - Enhance an error stacktrace with code excerpts and other goodies.</li>
+<li><a href="https://github.com/traceglMPL/tracegl" target="_blank" rel="noopener">TraceGL</a> - Transforms your JavaScript, injecting monitoring code that produces a log of everything that happens.</li>
+<li><a href="https://github.com/alidavut/locus" target="_blank" rel="noopener">locus</a> - Starts a REPL at runtime that has access to all variables.</li>
+<li><a href="https://github.com/buggerjs/bugger" target="_blank" rel="noopener">bugger</a> - Provides Chrome Devtools bindings to debug programs in Chrome.</li>
+<li><a href="https://github.com/davidmarkclements/0x" target="_blank" rel="noopener">0x</a> - Flamegraph profiling.</li>
+</ul>
+<h3 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h3><ul>
+<li><a href="https://github.com/winstonjs/winston" target="_blank" rel="noopener">winston</a> - A multi-transport async logging library.</li>
+<li><a href="https://github.com/trentm/node-bunyan" target="_blank" rel="noopener">Bunyan</a> - A simple and fast JSON logging library.</li>
+<li><a href="http://seanmonstar.github.io/intel/" target="_blank" rel="noopener">intel</a> - A comprehensive logging library (handlers, filters, formatters, console injection).</li>
+<li><a href="https://github.com/watson/console-log-level" target="_blank" rel="noopener">console-log-level</a> - The most simple logger imaginable with support for log levels and custom prefixes.</li>
+</ul>
+<h3 id="Command-line-utilities"><a href="#Command-line-utilities" class="headerlink" title="Command-line utilities"></a>Command-line utilities</h3><ul>
+<li><a href="https://github.com/chalk/chalk" target="_blank" rel="noopener">chalk</a> - Terminal string styling done right.</li>
+<li><a href="https://github.com/sindresorhus/meow" target="_blank" rel="noopener">meow</a> - CLI app helper.</li>
+<li><a href="https://github.com/substack/minimist" target="_blank" rel="noopener">minimist</a> - Parse command-line flags.</li>
+<li><a href="https://github.com/sindresorhus/get-stdin" target="_blank" rel="noopener">get-stdin</a> - Easier stdin.</li>
+<li><a href="https://github.com/sindresorhus/user-home" target="_blank" rel="noopener">user-home</a> - Get the path to the user home directory.</li>
+<li><a href="https://github.com/sindresorhus/log-update" target="_blank" rel="noopener">log-update</a> - Log by overwriting the previous output in the terminal. Useful for rendering progress bars, animations, etc.</li>
+<li><a href="https://github.com/SBoudrias/Inquirer.js" target="_blank" rel="noopener">Inquirer.js</a> - Interactive command-line prompt.</li>
+<li><a href="https://github.com/yeoman/update-notifier" target="_blank" rel="noopener">update-notifier</a> - Update notifications for your CLI app.</li>
+<li><a href="https://github.com/sindresorhus/ansi-escapes" target="_blank" rel="noopener">ansi-escapes</a> - ANSI escape codes for manipulating the terminal.</li>
+<li><a href="https://github.com/sindresorhus/sudo-block" target="_blank" rel="noopener">sudo-block</a> - Block users from running your app with root permissions.</li>
+<li><a href="https://github.com/yeoman/configstore" target="_blank" rel="noopener">configstore</a> - Easily load and persist config without having to think about where and how.</li>
+<li><a href="https://github.com/yeoman/insight" target="_blank" rel="noopener">insight</a> - Helps you understand how your tool is being used by anonymously reporting usage metrics to Google Analytics.</li>
+<li><a href="https://github.com/sindresorhus/log-symbols" target="_blank" rel="noopener">log-symbols</a> - Colored symbols for various log levels.</li>
+<li><a href="https://github.com/sindresorhus/figures" target="_blank" rel="noopener">figures</a> - Unicode symbols with Windows CMD fallbacks.</li>
+<li><a href="https://github.com/sindresorhus/boxen" target="_blank" rel="noopener">boxen</a> - Create boxes in the terminal.</li>
+<li><a href="https://github.com/sindresorhus/string-width" target="_blank" rel="noopener">string-width</a> - Get the visual width of a string - the number of columns required to display it.</li>
+<li><a href="https://github.com/sindresorhus/first-run" target="_blank" rel="noopener">first-run</a> - Check if it’s the first time the process is run.</li>
+<li><a href="https://github.com/sindresorhus/sparkly" target="_blank" rel="noopener">sparkly</a> - Generate sparklines ▁▂▃▅▂▇</li>
+<li><a href="https://github.com/dthree/vorpal" target="_blank" rel="noopener">vorpal</a> - A framework for interactive CLI apps.</li>
+<li><a href="https://github.com/chjj/blessed" target="_blank" rel="noopener">blessed</a> - A curses-like library.</li>
+<li><a href="https://github.com/sindresorhus/yn" target="_blank" rel="noopener">yn</a> - Parse yes/no like values.</li>
+<li><a href="https://github.com/Automattic/cli-table" target="_blank" rel="noopener">cli-table</a> - Pretty unicode tables.</li>
+<li><a href="https://github.com/madbence/node-drawille" target="_blank" rel="noopener">drawille</a> - Draw on the terminal with unicode braille characters.</li>
+<li><a href="https://github.com/maxogden/googleauth" target="_blank" rel="noopener">googleauth</a> - Create and load persistent Google authentication tokens for command-line apps.</li>
+<li><a href="https://github.com/jstrace/chart" target="_blank" rel="noopener">ascii-charts</a> - ASCII bar chart in the terminal.</li>
+<li><a href="https://github.com/tj/node-progress" target="_blank" rel="noopener">progress</a> - Flexible ascii progress bar.</li>
+<li><a href="https://github.com/sindresorhus/cli-cursor" target="_blank" rel="noopener">cli-cursor</a> - Toggle the CLI cursor.</li>
+<li><a href="https://github.com/timoxley/columnify" target="_blank" rel="noopener">columnify</a> - Create text-based columns suitable for console output. Supports cell wrapping.</li>
+<li><a href="https://github.com/shannonmoeller/cli-columns" target="_blank" rel="noopener">cli-columns</a> - Columnated unicode and ansi-safe text lists.</li>
+<li><a href="https://github.com/dominikwilkowski/cfonts" target="_blank" rel="noopener">cfonts</a> - Sexy ASCII fonts for the console.</li>
+<li><a href="https://github.com/codekirei/node-multispinner" target="_blank" rel="noopener">multispinner</a> - Multiple, simultaneous, individually controllable CLI spinners.</li>
+<li><a href="https://github.com/f/omelette" target="_blank" rel="noopener">omelette</a> - Shell autocompletion helper.</li>
+<li><a href="https://github.com/kentcdodds/cross-env" target="_blank" rel="noopener">cross-env</a> - Set environment variables cross-platform.</li>
+<li><a href="https://github.com/shelljs/shelljs" target="_blank" rel="noopener">shelljs</a> - Portable Unix shell commands.</li>
+<li><a href="https://github.com/sindresorhus/loud-rejection" target="_blank" rel="noopener">loud-rejection</a> - Make unhandled promise rejections fail loudly instead of the default silent fail.</li>
+<li><a href="https://github.com/sindresorhus/ora" target="_blank" rel="noopener">ora</a> - Elegant terminal spinner.</li>
+<li><a href="https://github.com/sindresorhus/term-img" target="_blank" rel="noopener">term-img</a> - Display images in your terminal.</li>
+<li><a href="https://github.com/yargs/yargs" target="_blank" rel="noopener">yargs</a> - Command-line parser that automatically generates an elegant user-interface.</li>
+</ul>
+<h3 id="Build-tools"><a href="#Build-tools" class="headerlink" title="Build tools"></a>Build tools</h3><ul>
+<li><a href="http://gulpjs.com" target="_blank" rel="noopener">gulp</a> - Streaming and fast build system that favors code over config.</li>
+<li><a href="https://github.com/broccolijs/broccoli" target="_blank" rel="noopener">Broccoli</a> - A fast, reliable asset pipeline, supporting constant-time rebuilds and compact build definitions.</li>
+<li><a href="https://github.com/substack/node-browserify" target="_blank" rel="noopener">browserify</a> - Browser-side require() the Node.js way.</li>
+<li><a href="https://github.com/webpack/webpack" target="_blank" rel="noopener">webpack</a> - Packs modules and assets for the browser.</li>
+<li><a href="https://github.com/brunch/brunch" target="_blank" rel="noopener">Brunch</a> - Front-end web app build tool with simple declarative config, fast incremental compilation, and an opinionated workflow.</li>
+<li><a href="https://github.com/strongloop/strong-build" target="_blank" rel="noopener">strong-build</a> - Build a node app package and prepare to deploy it as a package to production or use git to commit to a deploy branch.</li>
+<li><a href="http://gruntjs.com" target="_blank" rel="noopener">grunt</a> - Task runner that can perform repetitive tasks like minification, compilation, unit testing, linting, etc.</li>
+<li><a href="https://github.com/start-runner/start" target="_blank" rel="noopener">start</a> - Simple tasks runner powered by composable functions and promise chaining.</li>
+<li><a href="https://github.com/shannonmoeller/ygor" target="_blank" rel="noopener">ygor</a> - A promising task runner for when <code>npm run</code> isn’t enough and everything else is too much.</li>
+</ul>
+<h3 id="Hardware"><a href="#Hardware" class="headerlink" title="Hardware"></a>Hardware</h3><ul>
+<li><a href="https://github.com/rwaldron/johnny-five" target="_blank" rel="noopener">johnny-five</a> - Firmata based Arduino Framework.</li>
+<li><a href="https://github.com/voodootikigod/node-serialport" target="_blank" rel="noopener">serialport</a> - Access serial ports for reading and writing.</li>
+<li><a href="https://github.com/nonolith/node-usb" target="_blank" rel="noopener">usb</a> - USB library.</li>
+<li><a href="http://cylonjs.com" target="_blank" rel="noopener">cylon.js</a> - Next generation robotics framework with support for 26 different platforms.</li>
+<li><a href="https://github.com/fivdi/i2c-bus" target="_blank" rel="noopener">i2c-bus</a> - I2C serial bus access.</li>
+</ul>
+<h3 id="Templating"><a href="#Templating" class="headerlink" title="Templating"></a>Templating</h3><ul>
+<li><a href="https://github.com/marko-js/marko" target="_blank" rel="noopener">marko</a> - A fast and lightweight HTML-based templating engine that compiles templates to CommonJS modules and supports streaming, async rendering and custom tags.</li>
+<li><a href="https://github.com/mozilla/nunjucks" target="_blank" rel="noopener">nunjucks</a> - A powerful templating engine with inheritance, asynchronous control, and more (jinja2 inspired).</li>
+<li><a href="https://github.com/wycats/handlebars.js" target="_blank" rel="noopener">handlebars.js</a> - A superset of Mustache templates which adds powerful features like helpers and more advanced blocks.</li>
+<li><a href="http://twitter.github.io/hogan.js/" target="_blank" rel="noopener">hogan.js</a> - Twitter’s small, fast, phase-separated compiler for Mustache templates.</li>
+<li><a href="https://github.com/mde/ejs" target="_blank" rel="noopener">EJS</a> - Simple unopinionated templating language.</li>
+<li><a href="https://github.com/jadejs/jade" target="_blank" rel="noopener">Jade</a> - High-performance template engine heavily influenced by Haml.</li>
+</ul>
+<h3 id="Web-frameworks"><a href="#Web-frameworks" class="headerlink" title="Web frameworks"></a>Web frameworks</h3><ul>
+<li><a href="http://koajs.com" target="_blank" rel="noopener">Koa</a> - A new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs.</li>
+<li><a href="http://expressjs.com" target="_blank" rel="noopener">Express</a> - A minimal and flexible web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.</li>
+<li><a href="http://feathersjs.com" target="_blank" rel="noopener">Feathers</a> - A minimal and flexible microservice framework built in the spirit of Express.</li>
+<li><a href="http://hapijs.com" target="_blank" rel="noopener">Hapi</a> - A rich framework for building applications and services.</li>
+<li><a href="http://loopback.io" target="_blank" rel="noopener">LoopBack</a> - Powerful framework for creating REST APIs and easily connecting to backend data sources.</li>
+<li><a href="https://www.meteor.com" target="_blank" rel="noopener">Meteor</a> - An ultra-simple, database-everywhere, data-on-the-wire, pure-Javascript web framework. <em>(You might like <a href="https://github.com/Urigo/awesome-meteor" target="_blank" rel="noopener">awesome-meteor</a>)</em></li>
+<li><a href="http://sailsjs.org" target="_blank" rel="noopener">SailsJS</a> - An MVC web framework with a modern twist, supporting WebSockets, streams, and a data-driven API.</li>
+<li><a href="http://restify.com" target="_blank" rel="noopener">Restify</a> - A node framework built specifically to enable you to build correct REST web services.</li>
+<li><a href="https://github.com/basicallydan/interfake" target="_blank" rel="noopener">Interfake</a> - Rapid prototyping framework for making mock HTTP APIs, with a Node.js, command-line and HTTP interface.</li>
+<li><a href="https://github.com/derbyjs/derby" target="_blank" rel="noopener">Derby</a> - MVC framework, making it easy to write realtime, collaborative applications that run in both Node.js and browsers.</li>
+<li><a href="http://restberry.com" target="_blank" rel="noopener">Restberry</a> - Framework for setting up RESTful JSON APIs, applied to your database models without needing to write any code.</li>
+<li><a href="http://catberry.org" target="_blank" rel="noopener">Catberry</a> - Framework with Flux architecture, isomorphic web-components, and progressive rendering.</li>
+<li><a href="https://thinkjs.org" target="_blank" rel="noopener">ThinkJS</a> - Framework with ES2015+ support, WebSockets, REST API.</li>
+</ul>
+<h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><ul>
+<li><a href="http://jashkenas.github.io/docco/" target="_blank" rel="noopener">Docco</a> - A quick-and-dirty documentation generator which produces an HTML document that displays your comments intermingled with your code.</li>
+<li><a href="http://usejsdoc.org" target="_blank" rel="noopener">JSDoc</a> - API documentation generator similar to JavaDoc or PHPDoc.</li>
+<li><a href="https://github.com/tj/dox" target="_blank" rel="noopener">dox</a> - JavaScript documentation generator using Markdown and JSDoc.</li>
+<li><a href="https://github.com/sutoiku/jsdox" target="_blank" rel="noopener">jsdox</a> - JSDoc3 to Markdown documentation generator.</li>
+<li><a href="https://github.com/apidoc/apidoc" target="_blank" rel="noopener">apiDoc</a> - Inline documentation for RESTful web APIs.</li>
+<li><a href="http://documentation.js.org" target="_blank" rel="noopener">documentation.js</a> - API documentation generator with support for ES2015+ and flow annotation.</li>
+<li><a href="http://yui.github.com/yuidoc/" target="_blank" rel="noopener">YUIDoc</a> - Generates API documentation from comments in source.</li>
+</ul>
+<h3 id="Filesystem"><a href="#Filesystem" class="headerlink" title="Filesystem"></a>Filesystem</h3><ul>
+<li><a href="https://github.com/sindresorhus/del" target="_blank" rel="noopener">del</a> - Delete files/folders using globs.</li>
+<li><a href="https://github.com/sindresorhus/globby" target="_blank" rel="noopener">globby</a> - Glob files with support for multiple patterns.</li>
+<li><a href="https://github.com/sindresorhus/cpy" target="_blank" rel="noopener">cpy</a> - Copy files.</li>
+<li><a href="https://github.com/isaacs/rimraf" target="_blank" rel="noopener">rimraf</a> - Recursively delete files like <code>rm -rf</code>.</li>
+<li><a href="https://github.com/substack/node-mkdirp" target="_blank" rel="noopener">mkdirp</a> - Recursively create directories like <code>mkdir -p</code>.</li>
+<li><a href="https://github.com/isaacs/node-graceful-fs" target="_blank" rel="noopener">graceful-fs</a> - Drop-in replacement for the <code>fs</code> module with various improvements.</li>
+<li><a href="https://github.com/paulmillr/chokidar" target="_blank" rel="noopener">chokidar</a> - Filesystem watcher which stabilizes events from <code>fs.watch</code> and <code>fs.watchFile</code> as well as using native <code>fsevents</code> on OS X.</li>
+<li><a href="https://github.com/sindresorhus/find-up" target="_blank" rel="noopener">find-up</a> - Find a file by walking up parent directories.</li>
+<li><a href="https://github.com/sindresorhus/load-json-file" target="_blank" rel="noopener">load-json-file</a> - Read and parse a JSON file.</li>
+<li><a href="https://github.com/sindresorhus/write-json-file" target="_blank" rel="noopener">write-json-file</a> - Stringify and write JSON to a file atomically.</li>
+<li><a href="https://github.com/npm/fs-write-stream-atomic" target="_blank" rel="noopener">fs-write-stream-atomic</a> - Like <code>fs.createWriteStream()</code>, but atomic.</li>
+<li><a href="https://github.com/sindresorhus/filenamify" target="_blank" rel="noopener">filenamify</a> - Convert a string to a valid filename.</li>
+<li><a href="https://github.com/kevva/lnfs" target="_blank" rel="noopener">lnfs</a> - Force create symlinks like <code>ln -fs</code>.</li>
+<li><a href="https://github.com/bevry/istextorbinary" target="_blank" rel="noopener">istextorbinary</a> - Check if a file is text or binary.</li>
+<li><a href="https://github.com/szwacz/fs-jetpack" target="_blank" rel="noopener">fs-jetpack</a> - Completely redesigned file system API for convenience in everyday use.</li>
+<li><a href="https://github.com/jprichardson/node-fs-extra" target="_blank" rel="noopener">fs-extra</a> - Extra methods for the <code>fs</code> module.</li>
+<li><a href="https://github.com/sindresorhus/pkg-dir" target="_blank" rel="noopener">pkg-dir</a> - Find the root directory of an npm package.</li>
+</ul>
+<h3 id="Control-flow"><a href="#Control-flow" class="headerlink" title="Control flow"></a>Control flow</h3><ul>
+<li>Promises<ul>
+<li><a href="https://github.com/petkaantonov/bluebird" target="_blank" rel="noopener">Bluebird</a> - A fully featured promise library with focus on innovative features and performance.</li>
+<li><a href="https://github.com/floatdrop/pinkie-promise" target="_blank" rel="noopener">pinkie-promise</a> - Promise ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/pify" target="_blank" rel="noopener">pify</a> - Promisify a callback-style function.</li>
+<li><a href="https://github.com/samverschueren/rfpify" target="_blank" rel="noopener">rfpify</a> - Promisify a result-first callback-style function.</li>
+<li><a href="https://github.com/sindresorhus/delay" target="_blank" rel="noopener">delay</a> - Delay a promise a specified amount of time.</li>
+</ul>
+</li>
+<li>Callbacks<ul>
+<li><a href="https://github.com/sindresorhus/each-async" target="_blank" rel="noopener">each-async</a> - Async concurrent iterator like forEach.</li>
+<li><a href="https://github.com/caolan/async" target="_blank" rel="noopener">async</a> - Provides straight-forward, powerful functions for working with asynchronicity.</li>
+<li><a href="https://github.com/hash-bang/async-chainable" target="_blank" rel="noopener">async-chainable</a> - Chainable, pluggable async functionality.</li>
+<li><a href="https://github.com/watson/after-all-results" target="_blank" rel="noopener">after-all-results</a> - Bundle results of async functions calls into one callback with all the results.</li>
+</ul>
+</li>
+<li>Generators<ul>
+<li><a href="https://github.com/tj/co" target="_blank" rel="noopener">co</a> - The ultimate generator based flow-control goodness.</li>
+<li><a href="https://github.com/jmar777/suspend" target="_blank" rel="noopener">suspend</a> - Generator-based control flow that plays nice with callbacks, promises, and thunks.</li>
+<li><a href="https://github.com/novacrazy/bluebird-co" target="_blank" rel="noopener">bluebird-co</a> - A set of high performance yield handlers for Bluebird coroutines.</li>
+</ul>
+</li>
+<li>Streams<ul>
+<li><a href="http://highlandjs.org" target="_blank" rel="noopener">Highland.js</a> - Manages synchronous and asynchronous code easily, using nothing more than standard JavaScript and Node-like Streams.</li>
+</ul>
+</li>
+<li>Channels<ul>
+<li><a href="https://github.com/jlongster/js-csp" target="_blank" rel="noopener">js-csp</a> - Communicating sequential processes for JavaScript (like Clojurescript core.async, or Go).</li>
+</ul>
+</li>
+<li>Other<ul>
+<li><a href="https://github.com/strongloop/zone" target="_blank" rel="noopener">zone</a> - Provides a way to group and track resources and errors across asynchronous operations.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Streams"><a href="#Streams" class="headerlink" title="Streams"></a>Streams</h3><ul>
+<li><a href="https://github.com/rvagg/through2" target="_blank" rel="noopener">through2</a> - Tiny wrapper around streams2 Transform to avoid explicit subclassing noise.</li>
+<li><a href="https://github.com/hughsk/from2" target="_blank" rel="noopener">from2</a> - Convenience wrapper for ReadableStream, inspired by <code>through2</code>.</li>
+<li><a href="https://github.com/sindresorhus/get-stream" target="_blank" rel="noopener">get-stream</a> - Get a stream as a string or buffer.</li>
+<li><a href="https://github.com/maxogden/concat-stream" target="_blank" rel="noopener">concat-stream</a> - Concatenates a stream into strings or binary data.</li>
+<li><a href="https://github.com/sindresorhus/into-stream" target="_blank" rel="noopener">into-stream</a> - Convert a buffer/string/array/object into a stream.</li>
+<li><a href="https://github.com/mafintosh/duplexify" target="_blank" rel="noopener">duplexify</a> - Turn a writeable and readable stream into a single streams2 duplex stream.</li>
+<li><a href="https://github.com/mafintosh/pumpify" target="_blank" rel="noopener">pumpify</a> - Combine an array of streams into a single duplex stream.</li>
+<li><a href="https://github.com/mafintosh/peek-stream" target="_blank" rel="noopener">peek-stream</a> - Transform stream that lets you peek the first line before deciding how to parse it.</li>
+<li><a href="https://github.com/maxogden/binary-split" target="_blank" rel="noopener">binary-split</a> - A fast newline (or any delimiter) splitter stream.</li>
+<li><a href="https://github.com/jahewson/node-byline" target="_blank" rel="noopener">byline</a> - Super-simple line-by-line Stream reader.</li>
+<li><a href="https://github.com/sindresorhus/first-chunk-stream" target="_blank" rel="noopener">first-chunk-stream</a> - Transform the first chunk in a stream.</li>
+<li><a href="https://github.com/sindresorhus/pad-stream" target="_blank" rel="noopener">pad-stream</a> - Pad each line in a stream.</li>
+<li><a href="https://github.com/feross/multistream" target="_blank" rel="noopener">multistream</a> - Combine multiple streams into a single stream.</li>
+<li><a href="https://github.com/substack/stream-combiner2" target="_blank" rel="noopener">stream-combiner2</a> - Turn a pipeline into a single stream.</li>
+<li><a href="https://github.com/nodejs/readable-stream" target="_blank" rel="noopener">readable-stream</a> - Mirror of Streams2 and Streams3 implementations in core.</li>
+<li><a href="https://github.com/almost/through2-concurrent" target="_blank" rel="noopener">through2-concurrent</a> - Transform object streams concurrently.</li>
+<li><a href="https://github.com/e-conomic/graphicsmagick-stream" target="_blank" rel="noopener">graphicsmagick-stream</a> - Fast conversion/scaling of images using a pool of long lived GraphicsMagick processes.</li>
+</ul>
+<h3 id="Real-time"><a href="#Real-time" class="headerlink" title="Real-time"></a>Real-time</h3><ul>
+<li><a href="http://socket.io" target="_blank" rel="noopener">Socket.io</a> - Enables real-time bidirectional event-based communication.</li>
+<li><a href="https://github.com/sockjs/sockjs-node" target="_blank" rel="noopener">SockJS</a> - Low latency, full duplex, cross-domain channel browser-server, with WebSockets or without.</li>
+<li><a href="http://faye.jcoglan.com" target="_blank" rel="noopener">Faye</a> - Real-time client-server message bus, based on Bayeux protocol.</li>
+<li><a href="https://github.com/SocketCluster/socketcluster" target="_blank" rel="noopener">SocketCluster</a> - Scalable HTTP + WebSocket engine which can run on multiple CPU cores.</li>
+<li><a href="https://github.com/primus/primus" target="_blank" rel="noopener">Primus</a> - An abstraction layer for real-time frameworks to prevent module lock-in.</li>
+<li><a href="https://github.com/simonswain/straw" target="_blank" rel="noopener">Straw</a> - Real-time dataflow framework.</li>
+</ul>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><ul>
+<li><a href="https://github.com/lovell/sharp" target="_blank" rel="noopener">sharp</a> - The fastest module for resizing JPEG, PNG, WebP and TIFF images.</li>
+<li><a href="https://github.com/sindresorhus/image-type" target="_blank" rel="noopener">image-type</a> - Detect the image type of a Buffer/Uint8Array.</li>
+<li><a href="https://github.com/aheckmann/gm" target="_blank" rel="noopener">gm</a> - GraphicsMagick and ImageMagick wrapper.</li>
+<li><a href="https://github.com/EyalAr/lwip" target="_blank" rel="noopener">lwip</a> - Lightweight image processor which does not require ImageMagick.</li>
+<li><a href="https://github.com/nodeca/pica" target="_blank" rel="noopener">pica</a> - High quality &amp; fast resize (lanczos3) in pure JS. Alternative to canvas drawImage(), when no pixelation allowed.</li>
+<li><a href="https://github.com/oliver-moran/jimp" target="_blank" rel="noopener">jimp</a> - Image processing in pure JavaScript.</li>
+<li><a href="https://github.com/sindresorhus/is-progressive" target="_blank" rel="noopener">is-progressive</a> - Check if a JPEG image is progressive.</li>
+<li><a href="https://github.com/nodeca/probe-image-size" target="_blank" rel="noopener">probe-image-size</a> - Get the size of most image formats without a full download.</li>
+</ul>
+<h3 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h3><ul>
+<li><a href="https://github.com/epeli/underscore.string" target="_blank" rel="noopener">Underscore.string</a> - Collection of string manipulation utilities.</li>
+<li><a href="https://github.com/ashtuchkin/iconv-lite" target="_blank" rel="noopener">iconv-lite</a> - Convert character encodings.</li>
+<li><a href="https://github.com/sindresorhus/repeating" target="_blank" rel="noopener">repeating</a> - Repeat a string.</li>
+<li><a href="https://github.com/sindresorhus/string-length" target="_blank" rel="noopener">string-length</a> - Get the real length of a string - by correctly counting astral symbols and ignoring ansi escape codes.</li>
+<li><a href="https://github.com/sindresorhus/camelcase" target="_blank" rel="noopener">camelcase</a> - Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar.</li>
+<li><a href="https://github.com/sindresorhus/escape-string-regexp" target="_blank" rel="noopener">escape-string-regexp</a> - Escape RegExp special characters.</li>
+<li><a href="https://github.com/sindresorhus/execall" target="_blank" rel="noopener">execall</a> - Find multiple RegExp matches in a string.</li>
+<li><a href="https://github.com/sindresorhus/splice-string" target="_blank" rel="noopener">splice-string</a> - Remove or replace part of a string like <code>Array#splice</code>.</li>
+<li><a href="https://github.com/sindresorhus/indent-string" target="_blank" rel="noopener">indent-string</a> - Indent each line in a string.</li>
+<li><a href="https://github.com/sindresorhus/strip-indent" target="_blank" rel="noopener">strip-indent</a> - Strip leading whitespace from every line in a string.</li>
+<li><a href="https://github.com/sindresorhus/detect-indent" target="_blank" rel="noopener">detect-indent</a> - Detect the indentation of code.</li>
+<li><a href="https://github.com/mathiasbynens/he" target="_blank" rel="noopener">he</a> - A robust HTML entity encoder/decoder.</li>
+<li><a href="https://github.com/mashpie/i18n-node" target="_blank" rel="noopener">i18n-node</a> - Simple translation module with dynamic JSON storage.</li>
+<li><a href="https://github.com/nodeca/babelfish/" target="_blank" rel="noopener">babelfish</a> - i18n with very easy syntax for plurals.</li>
+<li><a href="https://github.com/sindresorhus/parse-columns" target="_blank" rel="noopener">parse-columns</a> - Parse text columns, like the output of Unix commands.</li>
+<li><a href="https://github.com/codekirei/hanging-indent" target="_blank" rel="noopener">hanging-indent</a> - Format a string into a hanging-indented paragraph.</li>
+<li><a href="https://github.com/sindresorhus/matcher" target="_blank" rel="noopener">matcher</a> - Simple wildcard matching.</li>
+</ul>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<li><a href="https://github.com/sindresorhus/random-int" target="_blank" rel="noopener">random-int</a> - Generate a random integer.</li>
+<li><a href="https://github.com/sindresorhus/random-float" target="_blank" rel="noopener">random-float</a> - Generate a random float.</li>
+<li><a href="https://github.com/sindresorhus/unique-random" target="_blank" rel="noopener">unique-random</a> - Generate random numbers that are consecutively unique.</li>
+<li><a href="https://github.com/sindresorhus/round-to" target="_blank" rel="noopener">round-to</a> - Round a number to a specific number of decimal places: <code>1.234</code> → <code>1.2</code>.</li>
+</ul>
+<h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><ul>
+<li><a href="https://github.com/scijs/ndarray" target="_blank" rel="noopener">ndarray</a> - Multidimensional arrays.</li>
+<li><a href="https://github.com/josdejong/mathjs" target="_blank" rel="noopener">mathjs</a> - An extensive math library.</li>
+<li><a href="https://github.com/sindresorhus/math-sum" target="_blank" rel="noopener">math-sum</a> - Sum numbers.</li>
+<li><a href="https://github.com/sindresorhus/math-clamp" target="_blank" rel="noopener">math-clamp</a> - Clamp a number.</li>
+</ul>
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><ul>
+<li><a href="http://momentjs.com" target="_blank" rel="noopener">Moment.js</a> - Parse, validate, manipulate, and display dates.</li>
+<li><a href="http://momentjs.com/timezone/" target="_blank" rel="noopener">Moment Timezone</a> - IANA Time Zone Database + Moment.js.</li>
+<li><a href="https://github.com/felixge/node-dateformat" target="_blank" rel="noopener">dateformat</a> - Date formatting.</li>
+<li><a href="https://github.com/samverschueren/tz-format" target="_blank" rel="noopener">tz-format</a> - Format a date with timezone: <code>2015-11-30T10:40:35+01:00</code>.</li>
+</ul>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><ul>
+<li><a href="https://github.com/sindresorhus/normalize-url" target="_blank" rel="noopener">normalize-url</a> - Normalize a URL.</li>
+<li><a href="https://github.com/sindresorhus/humanize-url" target="_blank" rel="noopener">humanize-url</a> - Humanize a URL: <a href="http://sindresorhus.com" target="_blank" rel="noopener">http://sindresorhus.com</a> → sindresorhus.com.</li>
+<li><a href="https://github.com/nodeca/url-unshort" target="_blank" rel="noopener">url-unshort</a> - Expand shortened URLs.</li>
+<li><a href="https://github.com/pid/speakingurl" target="_blank" rel="noopener">speakingurl</a> - Generate a slug from a string with transliteration.</li>
+<li><a href="https://github.com/markdown-it/linkify-it" target="_blank" rel="noopener">linkify-it</a> - Link patterns detector with full unicode support.</li>
+<li><a href="https://github.com/snd/url-pattern" target="_blank" rel="noopener">url-pattern</a> - Easier than regex string matching patterns for URLs and other strings.</li>
+<li><a href="https://github.com/nodeca/embedza" target="_blank" rel="noopener">embedza</a> - Create HTML snippets/embeds from URLs using info from oEmbed, Open Graph, meta tags.</li>
+</ul>
+<h3 id="Data-validation"><a href="#Data-validation" class="headerlink" title="Data validation"></a>Data validation</h3><ul>
+<li><a href="https://github.com/hapijs/joi" target="_blank" rel="noopener">joi</a> - Object schema description language and validator for JavaScript objects.</li>
+<li><a href="https://github.com/mafintosh/is-my-json-valid" target="_blank" rel="noopener">is-my-json-valid</a> - JSON Schema validator that uses code generation to be extremely fast.</li>
+<li><a href="https://github.com/nettofarah/property-validator" target="_blank" rel="noopener">property-validator</a> - Easy property validation for Express.</li>
+</ul>
+<h3 id="Parsing"><a href="#Parsing" class="headerlink" title="Parsing"></a>Parsing</h3><ul>
+<li><a href="https://github.com/wooorm/remark" target="_blank" rel="noopener">remark</a> - Markdown processor powered by plugins.</li>
+<li><a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="noopener">markdown-it</a> - A very fast markdown parser with 100% CommonMark support, extensions and syntax plugins.</li>
+<li><a href="https://github.com/inikulin/parse5" target="_blank" rel="noopener">parse5</a> - Fast full-featured spec compliant HTML parser.</li>
+<li><a href="https://github.com/sindresorhus/strip-json-comments" target="_blank" rel="noopener">strip-json-comments</a> - Strip comments from JSON.</li>
+<li><a href="https://github.com/sindresorhus/strip-css-comments" target="_blank" rel="noopener">strip-css-comments</a> - Strip comments from CSS.</li>
+<li><a href="https://github.com/sindresorhus/parse-json" target="_blank" rel="noopener">parse-json</a> - Parse JSON with more helpful errors.</li>
+<li><a href="https://github.com/medialize/URI.js" target="_blank" rel="noopener">URI.js</a> - URL mutation.</li>
+<li><a href="https://github.com/postcss/postcss" target="_blank" rel="noopener">PostCSS</a> - CSS parser / stringifier.</li>
+<li><a href="https://github.com/dominictarr/JSONStream" target="_blank" rel="noopener">JSONStream</a> - Streaming JSON.parse and stringify.</li>
+<li><a href="https://github.com/mafintosh/csv-parser" target="_blank" rel="noopener">csv-parser</a> - Streaming CSV parser that aims to be faster than everyone else.</li>
+<li><a href="https://github.com/sindresorhus/neat-csv" target="_blank" rel="noopener">neat-csv</a> - Fast CSV parser. Callback interface for the above.</li>
+<li><a href="https://github.com/pegjs/pegjs" target="_blank" rel="noopener">PEG.js</a> - Simple parser generator that produces fast parsers with excellent error reporting.</li>
+<li><a href="https://github.com/lapwinglabs/x-ray" target="_blank" rel="noopener">x-ray</a> - A web scraping utility to see through the <code>&lt;html&gt;</code> noise.</li>
+<li><a href="https://github.com/Hardmath123/nearley" target="_blank" rel="noopener">nearley</a> - Simple, fast, powerful parsing for JavaScript.</li>
+<li><a href="https://github.com/juliangruber/binary-extract" target="_blank" rel="noopener">binary-extract</a> - Extract a value from a buffer of JSON without parsing the whole thing.</li>
+<li><a href="https://github.com/nemtsov/json-mask" target="_blank" rel="noopener">json-mask</a> - Tiny language and engine for selecting parts of an object, hiding/masking the rest.</li>
+<li><a href="https://github.com/stylecow/stylecow" target="_blank" rel="noopener">Stylecow</a> - Parse, manipulate and convert modern CSS to make it compatible with all browsers. Extensible with plugins.</li>
+<li><a href="https://github.com/nodeca/js-yaml" target="_blank" rel="noopener">js-yaml</a> - Very fast YAML parser.</li>
+<li><a href="https://github.com/dominictarr/excel-stream" target="_blank" rel="noopener">excel-stream</a> - Streaming Excel spreadsheet to JSON parser.</li>
+<li><a href="https://github.com/Leonidas-from-XIV/node-xml2js" target="_blank" rel="noopener">xml2js</a> - XML to JavaScript object converter.</li>
+<li><a href="http://zaach.github.io/jison/" target="_blank" rel="noopener">Jison</a> - Friendly JavaScript parser generator. It shares genes with Bison, Yacc and family.</li>
+</ul>
+<h3 id="Humanize"><a href="#Humanize" class="headerlink" title="Humanize"></a>Humanize</h3><ul>
+<li><a href="https://github.com/sindresorhus/pretty-bytes" target="_blank" rel="noopener">pretty-bytes</a> - Convert bytes to a human readable string: <code>1337</code> → <code>1.34 kB</code>.</li>
+<li><a href="https://github.com/sindresorhus/pretty-ms" target="_blank" rel="noopener">pretty-ms</a> - Convert milliseconds to a human readable string: <code>1337000000</code> → <code>15d 11h 23m 20s</code>.</li>
+<li><a href="https://github.com/rauchg/ms.js" target="_blank" rel="noopener">ms</a> - Tiny millisecond conversion utility.</li>
+<li><a href="https://github.com/AriaMinaei/pretty-error" target="_blank" rel="noopener">pretty-error</a> - Errors with less clutter.</li>
+<li><a href="https://github.com/taijinlee/humanize" target="_blank" rel="noopener">humanize</a> - Data formatter for human readability.</li>
+<li><a href="https://github.com/Tjatse/node-readability" target="_blank" rel="noopener">read-art</a> - Extract readable content from any page.</li>
+</ul>
+<h3 id="Compression"><a href="#Compression" class="headerlink" title="Compression"></a>Compression</h3><ul>
+<li><a href="https://github.com/archiverjs/node-archiver" target="_blank" rel="noopener">Archiver</a> - Streaming interface for archive generation, supporting ZIP and TAR.</li>
+<li><a href="https://github.com/bower/decompress-zip" target="_blank" rel="noopener">decompress-zip</a> - Unzip.</li>
+<li><a href="https://github.com/nodeca/pako" target="_blank" rel="noopener">pako</a> - High speed zlib port to pure js (deflate, inflate, gzip).</li>
+<li><a href="https://github.com/mafintosh/tar-stream" target="_blank" rel="noopener">tar-stream</a> - Streaming tar parser and generator. Also see <a href="https://github.com/mafintosh/tar-fs" target="_blank" rel="noopener">tar-fs</a>.</li>
+<li><a href="https://github.com/kevva/decompress" target="_blank" rel="noopener">decompress</a> - A pluggable decompression module with support for <code>tar</code>, <code>tar.gz</code> and <code>zip</code> files out of the box.</li>
+</ul>
+<h3 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h3><ul>
+<li><a href="https://github.com/sindresorhus/get-port" target="_blank" rel="noopener">get-port</a> - Get an available port.</li>
+<li><a href="https://github.com/sindresorhus/ipify" target="_blank" rel="noopener">ipify</a> - Get your public IP address.</li>
+<li><a href="https://github.com/bevry/getmac" target="_blank" rel="noopener">getmac</a> - Get the computer MAC address.</li>
+</ul>
+<h3 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h3><ul>
+<li>Drivers<ul>
+<li><a href="https://github.com/Level/levelup" target="_blank" rel="noopener">LevelUP</a> - LevelDB.</li>
+<li><a href="https://github.com/mongodb/node-mongodb-native" target="_blank" rel="noopener">MongoDB</a> - MongoDB driver.</li>
+<li><a href="https://github.com/brianc/node-postgres" target="_blank" rel="noopener">PostgreSQL</a> - PostgreSQL client. Pure JavaScript and native libpq bindings.</li>
+<li><a href="https://github.com/felixge/node-mysql" target="_blank" rel="noopener">MySQL</a> - MySQL client.</li>
+<li><a href="https://github.com/luin/ioredis" target="_blank" rel="noopener">Redis</a> - Redis client.</li>
+</ul>
+</li>
+<li>ODM / ORM<ul>
+<li><a href="http://bookshelfjs.org" target="_blank" rel="noopener">Bookshelf</a> - ORM for PostgreSQL, MySQL and SQLite3 in the style of Backbone.js.</li>
+<li><a href="https://github.com/robconery/massive-js" target="_blank" rel="noopener">Massive</a> - PostgreSQL data access tool.</li>
+<li><a href="http://mongoosejs.com" target="_blank" rel="noopener">Mongoose</a> - Elegant MongoDB object modeling.</li>
+<li><a href="https://github.com/sequelize/sequelize" target="_blank" rel="noopener">Sequelize</a> - Multi-dialect ORM. Supports PostgreSQL, SQLite, MySQL.</li>
+<li><a href="https://github.com/balderdashy/waterline" target="_blank" rel="noopener">Waterline</a> - Datastore-agnostic tool that dramatically simplifies interaction with one or more databases.</li>
+<li><a href="https://github.com/SierraSoftworks/Iridium" target="_blank" rel="noopener">Iridium</a> - A high performance MongoDB ORM with support for promises, distributed caching, preprocessing, validation and plugins.</li>
+<li><a href="https://github.com/PhilWaldmann/openrecord" target="_blank" rel="noopener">OpenRecord</a> - ORM for PostgreSQL, MySQL, SQLite3 and RESTful datastores. Similar to ActiveRecord.</li>
+<li><a href="https://github.com/dresende/node-orm2" target="_blank" rel="noopener">orm2</a> - ORM for PostgreSQL, MariaDB, MySQL, Amazon Redshift, SQLite, MongoDB.</li>
+<li><a href="https://github.com/fahad19/firenze" target="_blank" rel="noopener">firenze</a> - Adapter-based ORM for MySQL, Memory, Redis, localStorage and more.</li>
+</ul>
+</li>
+<li>Query builder<ul>
+<li><a href="http://knexjs.org" target="_blank" rel="noopener">Knex</a> - A query builder for PostgreSQL, MySQL and SQLite3, designed to be flexible, portable, and fun to use.</li>
+</ul>
+</li>
+<li>Other<ul>
+<li><a href="https://github.com/louischatriot/nedb" target="_blank" rel="noopener">NeDB</a> - Embedded persistent database written in JavaScript.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><ul>
+<li><a href="https://ava.li" target="_blank" rel="noopener">AVA</a> - Futuristic test runner.</li>
+<li><a href="https://github.com/isaacs/node-tap" target="_blank" rel="noopener">tap</a> - A TAP test framework.</li>
+<li><a href="https://github.com/substack/tape" target="_blank" rel="noopener">tape</a> - TAP-producing test harness.</li>
+<li><a href="http://mochajs.org" target="_blank" rel="noopener">Mocha</a> - A feature-rich test framework making asynchronous testing simple and fun.</li>
+<li><a href="https://github.com/power-assert-js/power-assert" target="_blank" rel="noopener">power-assert</a> - Provides descriptive assertion messages through the standard assert interface.</li>
+<li><a href="https://github.com/mantoni/mochify.js" target="_blank" rel="noopener">Mochify</a> - TDD with Browserify, Mocha, PhantomJS and WebDriver.</li>
+<li><a href="https://github.com/vdemedes/trevor" target="_blank" rel="noopener">trevor</a> - Run tests against multiple versions of Node.js without switching versions manually or pushing to Travis CI.</li>
+<li><a href="https://github.com/alexfernandez/loadtest" target="_blank" rel="noopener">loadtest</a> - Run load tests for your web application, with an API for automation.</li>
+<li><a href="https://github.com/gotwarlost/istanbul" target="_blank" rel="noopener">istanbul</a> - A code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests.</li>
+<li><a href="https://github.com/bcoe/nyc" target="_blank" rel="noopener">nyc</a> - Code coverage tool built on istanbul that works with subprocesses.</li>
+<li><a href="https://github.com/sinonjs/sinon" target="_blank" rel="noopener">Sinon.JS</a> - Test spies, stubs and mocks.</li>
+<li><a href="https://github.com/nodeca/navit" target="_blank" rel="noopener">navit</a> - PhantomJS / SlimerJS wrapper to simplify browser test scripting.</li>
+<li><a href="https://github.com/pgte/nock" target="_blank" rel="noopener">nock</a> - HTTP mocking and expectations.</li>
+<li><a href="https://github.com/theintern/intern" target="_blank" rel="noopener">intern</a> - A next-generation code testing stack for JavaScript.</li>
+<li><a href="https://github.com/h2non/toxy" target="_blank" rel="noopener">toxy</a> - Hackable HTTP proxy to simulate failure scenarios and network conditions.</li>
+<li><a href="https://github.com/sindresorhus/hook-std" target="_blank" rel="noopener">hook-std</a> - Hook and modify stdout/stderr.</li>
+<li><a href="https://github.com/egoist/testen" target="_blank" rel="noopener">testen</a> - Run tests for multiple versions of Node.js locally with NVM.</li>
+</ul>
+<h3 id="Benchmarking"><a href="#Benchmarking" class="headerlink" title="Benchmarking"></a>Benchmarking</h3><ul>
+<li><a href="http://benchmarkjs.com" target="_blank" rel="noopener">Benchmark.js</a> - A robust benchmarking library that works on nearly all JavaScript platforms, supports high-resolution timers, and returns statistically significant results.</li>
+<li><a href="https://github.com/logicalparadox/matcha" target="_blank" rel="noopener">matcha</a> - A caffeine-driven, simplistic approach to benchmarking.</li>
+</ul>
+<h3 id="Minifiers"><a href="#Minifiers" class="headerlink" title="Minifiers"></a>Minifiers</h3><ul>
+<li><a href="http://lisperator.net/uglifyjs/" target="_blank" rel="noopener">UglifyJS2</a> - JavaScript minifier.</li>
+<li><a href="https://github.com/jakubpawlowicz/clean-css" target="_blank" rel="noopener">clean-css</a> - CSS minifier.</li>
+<li><a href="https://github.com/Swaagie/minimize" target="_blank" rel="noopener">minimize</a> - HTML minifier.</li>
+<li><a href="https://github.com/imagemin/imagemin" target="_blank" rel="noopener">imagemin</a> - Image minifier.</li>
+</ul>
+<h3 id="Authentication"><a href="#Authentication" class="headerlink" title="Authentication"></a>Authentication</h3><ul>
+<li><a href="http://passportjs.org" target="_blank" rel="noopener">Passport</a> - Simple, unobtrusive authentication.</li>
+<li><a href="https://github.com/bnoguchi/everyauth" target="_blank" rel="noopener">everyauth</a> - Authentication and authorization (password, Facebook, etc) for your Connect and Express apps.</li>
+<li><a href="https://passwordless.net" target="_blank" rel="noopener">passwordless</a> - Token-based authentication middleware for Express allowing authentication without passwords.</li>
+<li><a href="https://github.com/zemirco/lockit" target="_blank" rel="noopener">Lockit</a> - Full featured authentication solution for Express. Supports a variety of databases, predefined routes, email and two-factor authentication.</li>
+<li><a href="https://github.com/simov/grant" target="_blank" rel="noopener">Grant</a> - OAuth middleware for Express, Koa, and Hapi.</li>
+</ul>
+<h3 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h3><ul>
+<li><a href="https://github.com/andris9/Nodemailer" target="_blank" rel="noopener">Nodemailer</a> - The fastest way to handle email.</li>
+<li><a href="https://github.com/eleith/emailjs" target="_blank" rel="noopener">emailjs</a> - Send text/HTML emails with attachments to any SMTP server.</li>
+</ul>
+<h3 id="Job-queues"><a href="#Job-queues" class="headerlink" title="Job queues"></a>Job queues</h3><ul>
+<li><a href="https://github.com/Automattic/kue" target="_blank" rel="noopener">kue</a> - Priority job queue backed by Redis.</li>
+<li><a href="https://github.com/OptimalBits/bull" target="_blank" rel="noopener">bull</a> - Persistent job and message queue.</li>
+</ul>
+<h3 id="Node-js-management"><a href="#Node-js-management" class="headerlink" title="Node.js management"></a>Node.js management</h3><ul>
+<li><a href="https://github.com/tj/n" target="_blank" rel="noopener">n</a> - Node.js version management.</li>
+<li><a href="https://github.com/isaacs/nave" target="_blank" rel="noopener">nave</a> - Virtual Environments for Node.js.</li>
+<li><a href="https://github.com/ekalinin/nodeenv" target="_blank" rel="noopener">nodeenv</a> - A Node.js virtual environment compatible to Python’s virtualenv.</li>
+<li><a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="noopener">nvm for Windows</a> - Version management for Windows.</li>
+</ul>
+<h3 id="Polyfills"><a href="#Polyfills" class="headerlink" title="Polyfills"></a>Polyfills</h3><ul>
+<li>Node.js<ul>
+<li><a href="https://github.com/sindresorhus/set-immediate-shim" target="_blank" rel="noopener">set-immediate-shim</a> - Simple <code>setImmediate()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/path-is-absolute" target="_blank" rel="noopener">path-is-absolute</a> - Node.js 0.12 <code>path.isAbsolute()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/os-tmpdir" target="_blank" rel="noopener">os-tmpdir</a> - Node.js <code>os.tmpdir()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/os-homedir" target="_blank" rel="noopener">os-homedir</a> - Node.js 4.0 <code>os.homedir()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/debug-log" target="_blank" rel="noopener">debug-log</a> - Node.js 0.12 <code>util.debuglog()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/buffer-equals" target="_blank" rel="noopener">buffer-equals</a> - Node.js 0.12 <code>buffer.equals()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/buffer-includes" target="_blank" rel="noopener">buffer-includes</a> - Node.js 5.3.0 <code>buffer.includes()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/buf-indexof" target="_blank" rel="noopener">buf-indexof</a> - Node.js 4.0 <code>buffer.indexOf()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/buf-compare" target="_blank" rel="noopener">buf-compare</a> - Node.js 0.12 <code>Buffer.compare()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/fs-access" target="_blank" rel="noopener">fs-access</a> - Node.js 0.12 <code>fs.access()</code> &amp; <code>fs.accessSync()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/exec-file-sync" target="_blank" rel="noopener">exec-file-sync</a> - Node.js 0.12 <code>childProcess.execFileSync()</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/child-process-ctor" target="_blank" rel="noopener">child-process-ctor</a> - Node.js 4.0 <code>childProcess.ChildProcess</code> ponyfill.</li>
+<li><a href="https://github.com/sindresorhus/node-status-codes" target="_blank" rel="noopener">node-status-codes</a> - Node.js <code>http.STATUS_CODES</code> ponyfill.</li>
+<li><a href="https://github.com/isaacs/exit-code" target="_blank" rel="noopener">exit-code</a> - Node.js 0.12 <code>process.exitCode</code> polyfill.</li>
+<li><a href="https://github.com/sindresorhus/core-assert" target="_blank" rel="noopener">core-assert</a> - Node.js <code>assert</code> as a standalone module.</li>
+<li><a href="https://github.com/sindresorhus/deep-strict-equal" target="_blank" rel="noopener">deep-strict-equal</a> - Test for deep equality - Node.js <code>assert.deepStrictEqual()</code> algorithm as a standalone module.</li>
+</ul>
+</li>
+<li>JavaScript<ul>
+<li><a href="https://github.com/sindresorhus/object-assign" target="_blank" rel="noopener">object-assign</a> - ES2015 <code>Object.assign()</code> ponyfill.</li>
+<li><a href="https://github.com/floatdrop/pinkie-promise" target="_blank" rel="noopener">pinkie-promise</a> - ES2015 <code>Promise</code> ponyfill.</li>
+<li><a href="https://github.com/tvcutsem/harmony-reflect" target="_blank" rel="noopener">harmony-reflect</a> - ES2015 <code>Reflect</code> and <code>Proxy</code> polyfill.</li>
+<li><a href="https://github.com/paulmillr/es6-shim" target="_blank" rel="noopener">es6-shim</a> - Collection of ES2015 polyfills.</li>
+<li>More ES2015 polyfills at <a href="https://github.com/addyosmani/es6-tools#polyfills" target="_blank" rel="noopener">es6-tools</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Natural-language-processing"><a href="#Natural-language-processing" class="headerlink" title="Natural language processing"></a>Natural language processing</h3><ul>
+<li><a href="https://github.com/wooorm/retext" target="_blank" rel="noopener">retext</a> - An extensible natural language system.</li>
+<li><a href="https://github.com/wooorm/franc" target="_blank" rel="noopener">franc</a> - Detect the language of text.</li>
+<li><a href="https://github.com/sindresorhus/leven" target="_blank" rel="noopener">leven</a> - Measure the difference between two strings using the Levenshtein distance algorithm.</li>
+<li><a href="https://github.com/NaturalNode/natural" target="_blank" rel="noopener">natural</a> - A general natural language facility.</li>
+</ul>
+<h3 id="Process-management"><a href="#Process-management" class="headerlink" title="Process management"></a>Process management</h3><ul>
+<li><a href="https://github.com/Unitech/pm2" target="_blank" rel="noopener">PM2</a> - Advanced Process Manager.</li>
+<li><a href="https://github.com/coreybutler/node-windows" target="_blank" rel="noopener">node-windows</a> - Run scripts as a native Windows service and log to the Event viewer.</li>
+<li><a href="https://github.com/coreybutler/node-mac" target="_blank" rel="noopener">node-mac</a> - Run scripts as a native Mac daemon and log to the console app.</li>
+<li><a href="https://github.com/coreybutler/node-linux" target="_blank" rel="noopener">node-linux</a> - Run scripts as native system service and log to syslog.</li>
+<li><a href="https://github.com/foreverjs/forever" target="_blank" rel="noopener">forever</a> - A simple CLI tool for ensuring that a given script runs continuously (i.e. forever).</li>
+<li><a href="https://github.com/remy/nodemon" target="_blank" rel="noopener">nodemon</a> - Monitor for changes in your app and automatically restart the server.</li>
+<li><a href="https://github.com/petruisfan/node-supervisor" target="_blank" rel="noopener">supervisor</a> - Restart scripts when they crash or restart when a <code>*.js</code> file changes.</li>
+<li><a href="https://www.phusionpassenger.com/node_weekly" target="_blank" rel="noopener">Phusion Passenger</a> - Friendly process manager that integrates directly into Nginx.</li>
+<li><a href="https://github.com/andrewrk/naught" target="_blank" rel="noopener">naught</a> - Process manager with zero downtime deployment.</li>
+</ul>
+<h3 id="Automation"><a href="#Automation" class="headerlink" title="Automation"></a>Automation</h3><ul>
+<li><a href="https://github.com/octalmage/robotjs" target="_blank" rel="noopener">robotjs</a> -  Desktop Automation: control the mouse, keyboard and read the screen.</li>
+</ul>
+<h3 id="AST"><a href="#AST" class="headerlink" title="AST"></a>AST</h3><ul>
+<li><a href="https://github.com/ternjs/acorn" target="_blank" rel="noopener">Acorn</a> - A tiny, fast JavaScript parser.</li>
+<li><a href="https://github.com/millermedeiros/rocambole" target="_blank" rel="noopener">Rocambole</a> - Recursively walk and transform JavaScript AST.</li>
+</ul>
+<h3 id="Static-site-generators"><a href="#Static-site-generators" class="headerlink" title="Static site generators"></a>Static site generators</h3><ul>
+<li><a href="http://www.metalsmith.io" target="_blank" rel="noopener">Metalsmith</a> - An extremely simple, pluggable static site generator.</li>
+<li><a href="http://wintersmith.io" target="_blank" rel="noopener">Wintersmith</a> - Flexible, minimalistic, multi-platform static site generator.</li>
+<li><a href="http://assemble.io" target="_blank" rel="noopener">Assemble</a> - Static site generator for Node.js, Grunt.js, and Yeoman.</li>
+<li><a href="https://github.com/docpad/docpad" target="_blank" rel="noopener">DocPad</a> - Static site generator with dynamic abilities and huge plugin ecosystem.</li>
+</ul>
+<h3 id="Content-management-systems"><a href="#Content-management-systems" class="headerlink" title="Content management systems"></a>Content management systems</h3><ul>
+<li><a href="http://keystonejs.com" target="_blank" rel="noopener">KeystoneJS</a> - CMS and web application platform built on Express and MongoDB.</li>
+<li><a href="http://calip.so" target="_blank" rel="noopener">Calipso</a> - A simple content management system, built along similar themes to Drupal and Wordpress, that is designed to be fast, flexible and simple.</li>
+<li><a href="http://apostrophenow.org" target="_blank" rel="noopener">Apostrophe2</a> - A content management system with an emphasis on intuitive front end content editing and administration built on Express and MongoDB.</li>
+</ul>
+<h3 id="Forum"><a href="#Forum" class="headerlink" title="Forum"></a>Forum</h3><ul>
+<li><a href="https://nodebb.org" target="_blank" rel="noopener">nodeBB</a> - A better forum platform for the modern web.</li>
+</ul>
+<h3 id="Blogging"><a href="#Blogging" class="headerlink" title="Blogging"></a>Blogging</h3><ul>
+<li><a href="https://ghost.org" target="_blank" rel="noopener">ghost</a> - Simple, powerful publishing platform that allows you to share your story with the world.</li>
+<li><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> - Fast, simple and powerful blogging framework.</li>
+</ul>
+<h3 id="Weird"><a href="#Weird" class="headerlink" title="Weird"></a>Weird</h3><ul>
+<li><a href="https://github.com/sindresorhus/superb" target="_blank" rel="noopener">superb</a> - Get superb like words.</li>
+<li><a href="https://github.com/sindresorhus/cat-names" target="_blank" rel="noopener">cat-names</a> - Get popular cat names.</li>
+<li><a href="https://github.com/sindresorhus/dog-names" target="_blank" rel="noopener">dog-names</a> - Get popular dog names.</li>
+<li><a href="https://github.com/sindresorhus/superheroes" target="_blank" rel="noopener">superheroes</a> - Get superhero names.</li>
+<li><a href="https://github.com/sindresorhus/supervillains" target="_blank" rel="noopener">supervillains</a> - Get supervillain names.</li>
+<li><a href="https://github.com/maxogden/cool-ascii-faces" target="_blank" rel="noopener">cool-ascii-faces</a> - Get some cool ascii faces.</li>
+<li><a href="https://github.com/melaniecebula/cat-ascii-faces" target="_blank" rel="noopener">cat-ascii-faces</a> - ₍˄·͈༝·͈˄₎◞ ̑̑ෆ⃛ (=ↀωↀ=)✧ (^･o･^)ﾉ”</li>
+<li><a href="https://github.com/sindresorhus/cows" target="_blank" rel="noopener">cows</a> - ASCII cows.</li>
+</ul>
+<h3 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h3><ul>
+<li><a href="https://github.com/sindresorhus/execa" target="_blank" rel="noopener">execa</a> - A better <code>child_process</code>.</li>
+<li><a href="https://github.com/cheeriojs/cheerio" target="_blank" rel="noopener">cheerio</a> - Fast, flexible, and lean implementation of core jQuery designed specifically for the server.</li>
+<li><a href="https://github.com/atom/electron" target="_blank" rel="noopener">Electron</a> - Build cross platform desktop apps with web technologies. <em>(You might like <a href="https://github.com/sindresorhus/awesome-electron" target="_blank" rel="noopener">awesome-electron</a>)</em></li>
+<li><a href="https://github.com/sindresorhus/opn" target="_blank" rel="noopener">opn</a> - Opens stuff like websites, files, executables.</li>
+<li><a href="https://github.com/sindresorhus/hasha" target="_blank" rel="noopener">hasha</a> - Hashing made simple. Get the hash of a buffer/string/stream/file.</li>
+<li><a href="https://github.com/sindresorhus/dot-prop" target="_blank" rel="noopener">dot-prop</a> - Get a property from a nested object using a dot path.</li>
+<li><a href="https://github.com/sindresorhus/onetime" target="_blank" rel="noopener">onetime</a> - Only run a function once.</li>
+<li><a href="https://github.com/sindresorhus/mem" target="_blank" rel="noopener">mem</a> - Memoize functions - an optimization technique used to speed up consecutive function calls by caching the result of calls with identical input.</li>
+<li><a href="https://github.com/sindresorhus/require-uncached" target="_blank" rel="noopener">require-uncached</a> - Require a module bypassing the cache.</li>
+<li><a href="https://github.com/yeoman/stringify-object" target="_blank" rel="noopener">stringify-object</a> - Stringify an object/array like JSON.stringify just without all the double-quotes.</li>
+<li><a href="https://github.com/sindresorhus/strip-bom" target="_blank" rel="noopener">strip-bom</a> - Strip UTF-8 byte order mark (BOM) from a string/buffer/stream.</li>
+<li><a href="https://github.com/sindresorhus/deep-assign" target="_blank" rel="noopener">deep-assign</a> - Recursive <code>Object.assign()</code>.</li>
+<li><a href="https://github.com/sindresorhus/os-locale" target="_blank" rel="noopener">os-locale</a> - Get the system locale.</li>
+<li><a href="https://github.com/nodejs/nan" target="_blank" rel="noopener">nan</a> - A header file filled with macro and utility goodness for making add-on development for across Node.js versions easier.</li>
+<li><a href="https://github.com/sindresorhus/multiline" target="_blank" rel="noopener">multiline</a> - Multiline strings in JavaScript.</li>
+<li><a href="https://github.com/mscdex/ssh2" target="_blank" rel="noopener">ssh2</a> - An SSH2 client and server module.</li>
+<li><a href="https://github.com/markelog/adit" target="_blank" rel="noopener">adit</a> - SSH tunneling made simple.</li>
+<li><a href="https://github.com/sindresorhus/lazy-req" target="_blank" rel="noopener">lazy-req</a> - Require modules lazily.</li>
+<li><a href="https://github.com/sindresorhus/file-type" target="_blank" rel="noopener">file-type</a> - Detect the file type of a Buffer.</li>
+<li><a href="https://github.com/SGrondin/bottleneck" target="_blank" rel="noopener">Bottleneck</a> - A powerful rate limiter that makes throttling easy.</li>
+<li><a href="https://github.com/audreyt/node-webworker-threads" target="_blank" rel="noopener">webworker-threads</a> - Lightweight Web Worker API implementation with native threads.</li>
+<li><a href="https://github.com/mapbox/node-pre-gyp" target="_blank" rel="noopener">node-pre-gyp</a> - Makes it easy to publish and install Node.js C++ addons from binaries.</li>
+<li><a href="https://github.com/peterbraden/node-opencv" target="_blank" rel="noopener">opencv</a> - Bindings for OpenCV. The defacto computer vision library.</li>
+<li><a href="https://github.com/shutterstock/node-common-errors" target="_blank" rel="noopener">common-errors</a> - Common error classes and utility functions.</li>
+<li><a href="https://github.com/rschmukler/agenda" target="_blank" rel="noopener">agenda</a> - Lightweight job scheduling on MongoDB.</li>
+<li><a href="https://github.com/motdotla/dotenv" target="_blank" rel="noopener">dotenv</a> - Load environment variables from .env file.</li>
+<li><a href="https://github.com/sindresorhus/remote-git-tags" target="_blank" rel="noopener">remote-git-tags</a> - Get tags from a remote git repo.</li>
+<li><a href="https://github.com/npm/node-semver" target="_blank" rel="noopener">semver</a> - <a href="http://semver.org" target="_blank" rel="noopener">semver</a> parser.</li>
+<li><a href="https://github.com/h2non/nar" target="_blank" rel="noopener">nar</a> - Create self-contained executable binaries.</li>
+<li><a href="https://github.com/eleme/bell.js" target="_blank" rel="noopener">node-bell</a> - Real-time anomalies detection for periodic time series.</li>
+<li><a href="https://github.com/Marak/Faker.js" target="_blank" rel="noopener">Faker.js</a> - Generate massive amounts of fake data.</li>
+<li><a href="https://github.com/nodegit/nodegit" target="_blank" rel="noopener">nodegit</a> - Native bindings to Git.</li>
+<li><a href="https://github.com/pigulla/json-strictify" target="_blank" rel="noopener">json-strictify</a> - Safely serialize a value to JSON without data loss or going into an infinite loop.</li>
+<li><a href="https://github.com/sindresorhus/parent-module" target="_blank" rel="noopener">parent-module</a> - Get the path of the parent module.</li>
+<li><a href="https://github.com/sindresorhus/resolve-from" target="_blank" rel="noopener">resolve-from</a> - Resolve the path of a module like <code>require.resolve()</code> but from a given path.</li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/01/12/app-hbuilder/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2018/01/12/ios/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="https://github.com/sun142725" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="18334771358@163.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/"><i class="fa" aria-hidden="true">April 2018</i></a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/android/" style="font-size: 12.5px;">android</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/ios/" style="font-size: 12.5px;">ios</a> <a href="/tags/javascripts/" style="font-size: 12.5px;">javascripts</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/module/" style="font-size: 10px;">module</a> <a href="/tags/mui/" style="font-size: 10px;">mui</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/plugin/" style="font-size: 10px;">plugin</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/server/" style="font-size: 17.5px;">server</a> <a href="/tags/video/" style="font-size: 12.5px;">video</a> <a href="/tags/webGL/" style="font-size: 20px;">webGL</a> <a href="/tags/week/" style="font-size: 12.5px;">week</a> <a href="/tags/兼容/" style="font-size: 12.5px;">兼容</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
