@@ -11,3 +11,6 @@ http://my.csdn.net/qq20004604
 
 ### 马彦龙
 https://nate-river.github.io/
+
+### 我大昆哥
+https://www.frutex.xin/category/linux
