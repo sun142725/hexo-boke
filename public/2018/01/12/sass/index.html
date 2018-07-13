@@ -167,11 +167,11 @@
 <p>文件扩展名不同，Sass 是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名<br>语法书写方式不同，Sass 是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS 的语法书写和我们的 CSS 语法书写方式非常类似。<br>来看一个示例：</p>
 <p>/<em> Sass 语法 </em>/<br>$font-stack: Helvetica, sans-serif<br>$primary-color: #333<br>body<br>  font: 100% $font-stack<br>  color: $primary-color<br>/<em> Scss 语法 </em>/<br>$font-stack: Helvetica, sans-serif;<br>$primary-color: #333;<br>body {<br>  font: 100% $font-stack;<br>  color: $primary-color;<br>}<br>编译出来的 CSS</p>
 <p>body {<br>  font: 100% Helvetica, sans-serif;<br>  color: #333;<br>}<br>scss文件中可以完全像写正常的css那样去写.</p>
-<ol>
+<ol start="2">
 <li>sass安装<br>npm install -g node-sass<br>node-sass -w xxx.scss xxx.css –output-style expanded<br>node-sass 参数:</li>
 </ol>
 <p>-w, –watch                Watch a directory or file<br>-r, –recursive            Recursively watch directories or files<br>-o, –output               Output directory<br>-x, –omit-source-map-url  Omit source map URL comment from output<br>-i, –indented-syntax      Treat data from stdin as sass code (versus scss)<br>-q, –quiet                Suppress log output except on error<br>-v, –version              Prints version info<br>–output-style             CSS output style (nested | expanded | compact | compressed)<br>–indent-type              Indent type for output CSS (space | tab)<br>–indent-width             Indent width; number of spaces or tabs (maximum value: 10)<br>–linefeed                 Linefeed style (cr | crlf | lf | lfcr)<br>–source-comments          Include debug info in output<br>–source-map               Emit source map<br>–source-map-contents      Embed include contents in map<br>–source-map-embed         Embed sourceMappingUrl as data URI<br>–source-map-root          Base path, will be emitted in source-map as is<br>–include-path             Path to look for imported files<br>–follow                   Follow symlinked directories<br>–precision                The amount of precision allowed in decimal numbers<br>–importer                 Path to .js file containing custom importer<br>–functions                Path to .js file containing custom functions<br>–help                     Print usage info</p>
-<ol>
+<ol start="3">
 <li>Sass的基本特性<br>变量<br>$brand-primary : darken(#428bca, 6.5%) !default;<br>$btn-primary-color : #fff !default;<br>$btn-primary-bg : $brand-primary !default;<br>$btn-primary-border : darken($btn-primary-bg, 5%) !default;<br>.btn-primary {<br>background-color: $btn-primary-bg;<br>color: $btn-primary-color;<br>border: 1px solid $btn-primary-border;<br>}<br>$baseLineHeight: 2;<br>$baseLineHeight: 1.5 !default;<br>body{<br> line-height: $baseLineHeight;<br>}<br>/<em> 局部变量 </em>/<br>$color: orange !default;<br>.block {<br>color: $color;<br>}<br>em {<br>$color: red;<br>a {<br> color: $color;<br>}<br>}<br>span {<br>color: $color;<br>}<br>嵌套<br>nav {<br>a {<br> color: red;<br> header &amp; {<br>   color:green;<br> }<br>}<br>}</li>
 </ol>
 <p>.box {<br>  border: {<br>   top: 1px solid red;<br>   bottom: 1px solid green;<br>  }<br>}</p>
@@ -189,11 +189,11 @@
 <p>数据类型<br>Sass 和 JavaScript 语言类似，也具有自己的数据类型，在 Sass 中包含以下几种数据类型：</p>
 <p>数字: 如，1、 2、 13、 10px；<br>字符串：有引号字符串或无引号字符串，如，”foo” ‘bar’ baz；<br>颜色：如，blue, #04a3f9, rgba(255,0,0,0.5);<br>布尔型：如，true, false；<br>空值：如，null；<br>值列表：用空格或者逗号分开，如，1.5em 1em 0 2em , Helvetica, Arial, sans-serif<br>运算<br>.box {<br>  width: 20px + 8in;<br>}<br>$full-width: 960px;<br>$sidebar-width: 200px;<br>.content {<br>  width: $full-width -  $sidebar-width;<br>}<br>.box {<br>  width: 10px <em> 2;<br>}<br>.box {<br>  width: (100px / 2);<br>}<br>p {<br>  font: 10px/8px;             // 纯 CSS，不是除法运算<br>  $width: 1000px;<br>  width: $width/2;            // 使用了变量，是除法运算<br>  width: round(1.5)/2;        // 使用了函数，是除法运算<br>  height: (500px/2);          // 使用了圆括号，是除法运算<br>  margin-left: 5px + 8px/2px; // 使用了加（+）号，是除法运算<br>}<br>.box {<br>  width: ((220px + 720px) - 11 </em> 20 ) / 12 ;<br>}<br>p {<br>  color: #010203 + #040506;<br>  background-color: #010203 * 2;<br>}</p>
 <p>$content: “Hello” + “” + “Sass!”;<br>.box:before {<br>  content: “ #{$content} “;<br>}</p>
-<ol>
+<ol start="4">
 <li>Sass高级特性<br>@if<br>@mixin blockOrHidden($boolean:true) {<br>@if $boolean {<br> display: block;<br>}<br>@else {<br> display: none;<br>}<br>}<br>.block {<br>@include blockOrHidden;<br>}<br>.hidden{<br>@include blockOrHidden(false);<br>}<br>@for<br>@for $i from <start> through <end><br>@for $i from <start> to <end><br>@for $i from 1 through 3 {<br>.item-#{$i} { width: 2em <em> $i; }<br>}<br>@for $i from 1 to 3 {<br>.item-#{$i} { width: 2em </em> $i; }<br>}<br>$grid-prefix: span !default;<br>$grid-width: 60px !default;<br>$grid-gutter: 20px !default;</end></start></end></start></li>
 </ol>
 <p>%grid {<br>  float: left;<br>  margin-left: $grid-gutter / 2;<br>  margin-right: $grid-gutter / 2;<br>}<br>@for $i from 1 through 12 {<br>  .#{$grid-prefix}#{$i}{<br>    width: $grid-width <em> $i + $grid-gutter </em> ($i - 1);<br>    @extend %grid;<br>  }<br>}<br>@each<br>$list: adam john wynn mason kuroir; //$list 就是一个列表<br>@mixin author-images {<br>    @each $author in $list {<br>        .photo-#{$author} {<br>            background: url(“/images/avatars/#{$author}.png”) no-repeat;<br>        }<br>    }<br>}<br>.author-bio {<br>    @include author-images;<br>}</p>
-<ol>
+<ol start="5">
 <li>Sass中的函数<br>@function double($n) {<br>@return $n * 2;<br>}<br>#sidebar {<br>width: double(5px);<br>}<br>全部的内置函数</li>
 </ol>
 <p>字符串函数<br>unquote<br>quote<br>To-upper-case<br>To-lower-case<br>percentage<br>.footer{<br>  width : percentage(.2)<br>}<br>round<br>ceil<br>floor<br>abs<br>min<br>max<br>random<br>列表函数</p>
@@ -222,7 +222,7 @@
 <p>ul.blue {<br>  @include swatchesLighten($blueBase);<br>  @include swatchesDarken($blueBase);<br>  li:nth-child(11) {<br>    background-color: $blueBase;<br>  }<br>}</p>
 <p>ul.purple {<br>  @include swatchesLighten($purpleBase);<br>  @include swatchesDarken($purpleBase);<br>  li:nth-child(11) {<br>    background-color: $purpleBase;<br>  }<br>}</p>
 <p>ul.black {<br>  @include swatchesLighten($blackBase);<br>  @include swatchesDarken($blackBase);<br>  li:nth-child(11) {<br>    background-color: $blackBase;<br>  }<br>}</p>
-<ol>
+<ol start="6">
 <li>Sass的@规则<br>@import</li>
 </ol>
 <p>@media</p>
@@ -253,10 +253,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2018/01/12/react/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+        <a href="/2018/01/12/node-package/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
     
-        <a href="/2018/01/12/plugin/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="/2018/01/12/blog/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
@@ -341,7 +341,7 @@
         
     <div class="widget">
       <h3 class="title">Archives</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/"><i class="fa" aria-hidden="true">April 2018</i></a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">1</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/"><i class="fa" aria-hidden="true">May 2018</i></a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/"><i class="fa" aria-hidden="true">April 2018</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">1</span></li></ul>
     </div>
 
 
