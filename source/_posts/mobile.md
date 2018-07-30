@@ -50,3 +50,9 @@ body{
 	   box-sizing:border-box;
    }
 ```
+
+```bash
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+     //  padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+}
+```
