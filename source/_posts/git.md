@@ -29,6 +29,8 @@ push前看好所在分支
 第一次推送前注意
 `git push -u origin master`
 `git push`
+* 清除git本地缓存
+`git rm -r --cached .`
 
 ### 在服务器搭建git环境
 ```bash

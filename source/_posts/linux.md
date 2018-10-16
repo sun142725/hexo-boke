@@ -8,6 +8,7 @@ author: 孙继红
 [CSDN博客](http://blog.csdn.net/xsj_blog/article/details/52141501)
 ### 基础操作
 
+* 查看系统具体版本 `cat /etc/redhat-release`
 * 查找文件 `which`
 * 查看当前文件所在目录 `pwd`
 * sudo
