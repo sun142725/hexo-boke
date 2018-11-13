@@ -45,3 +45,36 @@ weex run ios
 weex run android
 weex run web
 ```
+若遇到无法获取资源的错误，则是因为没有科学上网问题，需要更换依赖库下载地址。在项目文件夹`\platforms\android`找到`build.gradel`文件，将maven地址更改为阿里云的镜像地址，并注释掉前面的代码。
+https://blog.csdn.net/zjw_python/article/details/81700719
+```bash
+buildscript {
+    repositories {
+        // mavenLocal()
+        //jcenter()
+        // mavenCentral()
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.taobao.android:weexplugin-gradle-plugin:1.3'
+    }
+}
+
+allprojects {
+    repositories {
+        // mavenLocal()
+        //jcenter()
+        // mavenCentral()
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public'
+        }
+    }
+}
+```
+### [参坑参考](https://www.jianshu.com/p/497f1a9ff33f)
+
+### 环境变量
+**weex.config.env === WXEnvironment**
