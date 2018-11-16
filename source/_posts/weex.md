@@ -1,7 +1,7 @@
 ---
 title: week
-date: 2018-01-12 16:56:37
-tags: week
+date: 2018-11-8 16:56:37
+tags: weex
 author: 孙继红
 ---
 `Write Once, Run Anywhere`
@@ -78,3 +78,5 @@ allprojects {
 
 ### 环境变量
 **weex.config.env === WXEnvironment**
+
+### [常见坑](./weex_write.md)
