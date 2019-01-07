@@ -18,4 +18,7 @@ author: 孙继红
 * 创建目录 `mkdir`
 * 分页显示文本文件内容 `more`、`less`
 * 清除信息 `clear`
-
+* yum  install lrzsz
+  安装完毕即可使用。
+  
+  rz，sz是便是Linux/Unix同Windows进行ZModem文件传输的命令行工具，
